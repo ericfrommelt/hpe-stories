@@ -1,0 +1,71 @@
+.title {
+  font-family: "MetricHPE-Web-Bold", sans-serif;
+  font-size: 130px;
+}
+
+.subtitle {
+  display: block;
+  font-size: 44px;
+}
+
+p {
+  font-family: "MetricHPE-Web-Regular", sans-serif;
+}
+
+h2 {
+  font-family: "HPESimpleWeb-Regular", "Courier New", Courier, monospace;
+  font-size: 40px;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+h3 {
+  font-family: "MetricHPE-Web-Bold", sans-serif;
+  font-size: 40px;
+}
+
+.introcopy {
+  font-size: 28px;
+}
+
+.listcopy {
+  font-size: 24px;
+}
+
+ul > li > ul > li {
+  font-family: "MetricHPE-Web-Regular", sans-serif;
+  font-size: 24px;
+}
+
+Ul > li > ul > li:before {
+  content: "";
+  display: inline-block;
+  height: 0.75rem;
+  background-image: url("../svg/arrow-turq.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 1.5rem;
+}
+
+blockquote > p {
+  font-size: 24px;
+}
+
+cite {
+  font-family: "MetricHPE-Web-Regular", sans-serif;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.ctacopy {
+  font-family: "MetricHPE-Web-SemiBold";
+  font-size: 26px;
+}
+
+footer a {
+  font-family: "MetricHPE-Web-Regular", sans-serif;
+  font-size: 24px;
+}
