@@ -1,6 +1,30 @@
+.gridWrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.masthead {
+  position: relative;
+  min-height: 20rem;
+  padding: 2rem 0 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 20px solid #ff8d6d;
+  z-index: 1;
+}
+
+.logo {
+  /* padding: 5rem 0; */
+  max-width: 240px;
+  margin-bottom: 2rem;
+}
+
 .title {
   font-family: "MetricHPE-Web-Bold", sans-serif;
   font-size: 130px;
+  line-height: 110px;
+  color: #fff;
+  margin-top: 4rem;
 }
 
 .subtitle {
@@ -15,6 +39,8 @@ p {
 h2 {
   font-family: "HPESimpleWeb-Regular", "Courier New", Courier, monospace;
   font-size: 40px;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
 }
 
 ul {
@@ -25,22 +51,39 @@ ul {
 h3 {
   font-family: "MetricHPE-Web-Bold", sans-serif;
   font-size: 40px;
+  margin-top: 0;
 }
 
 .introcopy {
+  position: relative;
+  background-color: #2ad2c9;
+  color: #425563;
+  padding: 2em 1em 2em 2em;
   font-size: 28px;
+  max-width: 85%;
+  margin-top: -6em;
+  z-index: 10;
+  border-bottom: 20px solid black;
+  line-height: 1.8rem;
+}
+
+.introcopyborder {
+  background: black;
+  position: absolute;
+  z-index: 9;
+  height: 40px;
 }
 
 .listcopy {
   font-size: 24px;
 }
 
-ul > li > ul > li {
-  font-family: "MetricHPE-Web-Regular", sans-serif;
-  font-size: 24px;
+ul > li {
+  font-family: "HPESimpleWeb-Regular", "Courier New", Courier, monospace;
+  font-size: 1.2rem;
 }
 
-Ul > li > ul > li:before {
+Ul > li:before {
   content: "";
   display: inline-block;
   height: 0.75rem;
@@ -52,6 +95,20 @@ Ul > li > ul > li:before {
 
 blockquote > p {
   font-size: 24px;
+  margin-left: 1.8em;
+  margin-top: -2.4em;
+}
+
+blockquote::before {
+  font-family: "MetricHPE-Web-Black", sans-serif;
+  color: #425563;
+  content: "“";
+  font-size: 4em;
+  display: inline-block;
+}
+
+blockquote > cite {
+  margin-left: 1.8em;
 }
 
 cite {
@@ -60,12 +117,158 @@ cite {
   font-size: 24px;
 }
 
+.contentList {
+  margin: 4em 0 0 2em;
+}
+
+.cloudCliffOne {
+  position: relative;
+  color: #fff;
+  background-color: #000;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  z-index: -1;
+}
+
+.cloudCliffOneImage {
+  grid-column: 7 / span 6;
+  grid-row: 1;
+  margin-top: -5rem;
+  border-bottom: 20px solid #000;
+}
+
+.cloudCliffOneContent {
+  grid-column: 2 / span 5;
+  grid-row: 1;
+  margin-bottom: 4em;
+}
+
+.cloudCliffOneQuote {
+  grid-column: 3 / span 10;
+  background-color: #2ad2c9;
+  color: #425563;
+  padding: 4em 3em 3em 3em;
+  margin: 0;
+  z-index: 1000;
+  box-shadow:
+    /* left "inner border" */ inset 20px 0 0 0 black,
+    /* top "inner border" */ inset 0 20px 0 0 black,
+    /* bottom "inner border" */ inset 0 -20px 0 0 black,
+    /* right "inner border" */ inset -20px 0 0 0 #ff8d6d;
+}
+
+.cloudCliffTwoImage {
+  grid-column: 1 / span 4;
+  grid-row: 3;
+  margin-top: -5rem;
+  border-bottom: 20px solid #000;
+  z-index: -1;
+  border-top: 20px solid #ff8d6d;
+}
+
+.cloudCliffTwoContent {
+  grid-column: 6 / span 6;
+  grid-row: 3;
+  margin-left: -2em;
+  margin-bottom: 4em;
+}
+
+.cloudCliffTwoQuote {
+  grid-column: 1 / span 10;
+  background-color: #2ad2c9;
+  color: #425563;
+  padding: 4em 3em 3em 3em;
+  box-shadow:
+  /* top "inner border" */ inset 0 20px 0 0 black,
+    /* bottom "inner border" */ inset 0 -20px 0 0 black,
+    /* right "inner border" */ inset -20px 0 0 0 black,
+    /* left "inner border" */ inset 20px 0 0 0 #ff8d6d;
+  margin: 0;
+  z-index: 1000;
+}
+
+.cloudCliffThreeImage {
+  grid-column: 9 / span 4;
+  grid-row: 5;
+  margin-top: -5rem;
+  border-bottom: 20px solid #000;
+  z-index: -1;
+  border-top: 20px solid #ff8d6d;
+}
+
+.cloudCliffThreeContent {
+  grid-column: 2 / span 7;
+  grid-row: 5;
+  margin-bottom: 4em;
+}
+
+.cloudCliffThreeQuote {
+  grid-column: 4 / span 9;
+  background-color: #2ad2c9;
+  color: #425563;
+  padding: 4em 3em 3em 3em;
+  box-shadow:
+    /* top "inner border" */ inset 0 20px 0 0 black,
+    /* right "inner border" */ inset -20px 0 0 0 #ff8d6d;
+  margin: 0;
+  z-index: 1000;
+}
+
+.cloudCliffFooter {
+  grid-column: 1 / span 12;
+  background-color: #fff;
+  color: #000;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.ctaWrapper {
+  grid-column: 4 / span 8;
+  grid-row: 1;
+  margin: 8rem 0 1rem 0;
+}
+
 .ctacopy {
   font-family: "MetricHPE-Web-SemiBold";
   font-size: 26px;
+  margin-bottom: 1em;
+}
+
+footer {
+  margin: -4em 0 0 0;
+  padding-bottom: 4em;
 }
 
 footer a {
+  grid-column: 4 / span 9;
   font-family: "MetricHPE-Web-Regular", sans-serif;
   font-size: 24px;
+  color: #ff8d6d;
+}
+
+.btnWrapper {
+  width: 7em;
+  height: 7em;
+  grid-column: 2 / span 2;
+  grid-row: 1;
+  background-color: #01a982;
+  margin-top: 8em;
+  display: flex;
+  justify-content: center;
+}
+
+.btnArrow {
+  max-inline-size: 2.4em;
+  align-self: center;
+  margin-top: 0.2em;
+  margin-left: 0.2em;
+}
+
+.cls1 {
+  max-width: 50%;
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 4px;
+  padding: 2em;
 }

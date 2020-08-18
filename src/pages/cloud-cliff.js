@@ -1,70 +1,135 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
 import style from "./cloud-cliff.module.css"
 import Logo from "../svg/logo.inline.svg"
+import BackgroundImage from "gatsby-background-image"
+import Img from "gatsby-image"
+import { checkPropTypes } from "prop-types"
 
-const IndexPage = () => (
+
+
+const CloudCliff = (props) => (
   <Layout>
-    <SEO title="Home" />
-    <div className={style.logo}><Logo /></div>
-    <h1 className={style.title}>Master the Cloud Cliff: <span className={style.subtitle}>Three Critical Business Concerns</span></h1>
+    <header>
+      <BackgroundImage
+        fluid={ props.data.headerImage.childImageSharp.fluid }
+      >
+        <div className={ style.masthead}>
+          <div className={style.logo}><Logo /></div>
+          <h1 className={style.title}>Master the Cloud Cliff: <span className={style.subtitle}>Three Critical Business Concerns</span></h1>
+        </div>
+      </BackgroundImage>
+    </header>
+
     <p className={style.introcopy}>Many executives acknowledge the benefits of public cloud services, but say it's important to navigate the "Cloud Cliffs" that can create barriers for enterprises changing strategic direction.</p>
-    <ul>
-      <li>
+
+    <div className={ style.cloudCliffOne }>
+      <Img 
+        fluid={ props.data.imageOne.childImageSharp.fluid }
+        className={ style.cloudCliffOneImage }
+      >
+      </Img>
+      <div className={ style.cloudCliffOneContent }>
         <h2 className={style.listheader}>Cloud Cliff #1</h2>
         <h3>Performance</h3>
         <p className={style.listcopy}>Even the most efficient and well-designed cloud environments can be limited by performance shortcomings such as:</p>
-        <ul>
+        <ul className={style.contentList}>
           <li>Latency</li>
           <li>Scalability</li>
           <li>Responsiveness</li>
         </ul>
-        <blockquote>
-          <p>Scaling is better on-prem for some things, as our IT guys can make that happen through virtualizion.</p>
-          <cite>&mdash; Healthcare IT executive</cite>
-        </blockquote>
-      </li>
-
-      <li>
+      </div>
+      <blockquote className={ style.cloudCliffOneQuote }>
+        <p>Scaling is better on-prem for some things, as our IT guys can make that happen through virtualizion.</p>
+        <cite>&mdash; Healthcare IT executive</cite>
+      </blockquote>
+      <Img 
+        fluid={ props.data.imageTwo.childImageSharp.fluid }
+        className={ style.cloudCliffTwoImage }
+        >
+      </Img>
+      <div className={ style.cloudCliffTwoContent }>
         <h2 className={style.listheader}>Cloud Cliff #2</h2>
         <h3>Cost</h3>
         <p className={style.listcopy}>Many executives expected rock-bottom pricing from unmanaged, commodity cloud offering and instead experienced issues such as:</p>
-        <ul>
-          <li>High-than-expected costs</li>
+        <ul className={style.contentList}>
+          <li>Higher-than-expected costs</li>
           <li>Issues with economies of scale</li>
           <li>Inconsistent and/or confusing billing</li>
         </ul>
-        <blockquote>
-          <p>With on-prem solutions, you know what you buy, how much is being depreciated, and the cost for labor to run it all.</p>
-          <cite>&mdash; Public sector IT executive</cite>
-        </blockquote>
-      </li>
-
-      <li>
+      </div>
+      <blockquote className={ style.cloudCliffTwoQuote }>
+        <p>With on-prem solutions, you know what you buy, how much is being depreciated, and the cost for labor to run it all.</p>
+        <cite>&mdash; Public sector IT executive</cite>
+      </blockquote>
+      <Img 
+        fluid={ props.data.imageThree.childImageSharp.fluid }
+        className={ style.cloudCliffThreeImage }
+        >
+      </Img>
+      <div className={ style.cloudCliffThreeContent }>
         <h2>Cloud Cliff #3</h2>
         <h3>Security &amp; Control Risks</h3>
         <p className={style.listcopy}>A loss of control is often one of the main drawbacks for public cloud deployments, raising issues such as:</p>
-        <ul>
+        <ul className={style.contentList}>
           <li>Lack of flexibility and customization</li>
           <li>Limited security and compliance</li>
           <li>Cloud sprawl and vendor lock-in</li>
         </ul>
-        <blockquote>
-          <p>For organizations like ours that deploy IoT solutions, security is not optional; it's essential.</p>
-          <cite>&mdash; Healthcare IT executive</cite>
-        </blockquote>
-      </li>
-    </ul>
-
-    <footer>
-      <p className={style.ctacopy}>Get the details on how HPE can help you find your right mix of hybrid IT, including lessons from companies that have successfully faced cloud challenges. Download the full report:</p>
-      <a href="">Master the Cloud Cliff: How hybrid IT helps companies balance performance, cost, and control</a>
-    </footer>
+      </div>
+      <blockquote className={ style.cloudCliffThreeQuote }>
+        <p>For organizations like ours that deploy IoT solutions, security is not optional; it's essential.</p>
+        <cite>&mdash; Healthcare IT executive</cite>
+      </blockquote>
+      <footer className={ style.cloudCliffFooter }>
+        <div className={style.btnWrapper}>
+          <div className={ style.btnArrow }>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.24 82.83">
+              <title>transformationCTA_Arrow</title>
+              <g id="Layer_2" data-name="Layer 2"><g id="Content"><polyline className={ style.cls1 } points="1.41 1.41 41.41 41.41 1.41 81.41"/></g></g></svg>
+          </div>
+        </div>
+        <div className={style.ctaWrapper}>
+          <p className={style.ctacopy}>Get the details on how HPE can help you find your right mix of hybrid IT, including lessons from companies that have successfully faced cloud challenges. Download the full report:</p>
+          <a href="">Master the Cloud Cliff: How hybrid IT helps companies balance performance, cost, and control</a>
+        </div>
+      </footer>
+    </div>
   </Layout>
 )
 
-export default IndexPage
+export default CloudCliff
+
+export const pageQuery = graphql`
+  query {
+    headerImage: file(relativePath: { eq: "cliff-crop.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageOne: file(relativePath: { eq: "engine.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageTwo: file(relativePath: { eq: "money-crop.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageThree: file(relativePath: { eq: "skier.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
