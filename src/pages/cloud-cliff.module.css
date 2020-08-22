@@ -38,6 +38,13 @@
   margin-top: 4rem;
 }
 
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 7.125rem;
+    line-height: 6.125rem;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .title {
     font-size: 12.125rem;
@@ -49,6 +56,12 @@
 .subtitle {
   display: block;
   font-size: 2.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  .subtitle {
+    font-size: 2.3rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -69,6 +82,13 @@ h3 {
   font-family: "MetricHPE-Web-Bold", sans-serif;
   font-size: 2.5rem;
   margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  h2,
+  h3 {
+    font-size: 2.4rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -219,6 +239,19 @@ cite {
   border-bottom: 20px solid #000;
 }
 
+@media screen and (min-width: 768px) {
+  .cloudCliffOneImage {
+    grid-column: 8 / span 5;
+    margin-top: -6em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cloudCliffOneImage {
+    grid-column: 7 / span 6;
+  }
+}
+
 .cloudCliffOneContent {
   grid-column: 2 / span 5;
   grid-row: 1;
@@ -264,8 +297,14 @@ cite {
 .cloudCliffTwoContent {
   grid-column: 6 / span 6;
   grid-row: 3;
-  margin-left: -2em;
   margin-bottom: 4em;
+}
+
+@media screen and (min-width: 768px) {
+  .cloudCliffTwoContent {
+    grid-column: 6 / span 6;
+    margin-left: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -303,6 +342,12 @@ cite {
   border-bottom: 20px solid #000;
   z-index: -1;
   border-top: 20px solid #ff8d6d;
+}
+
+@media screen and (min-width: 768px) {
+  .cloudCliffThreeImage {
+    grid-column: 10 / span 3;
+  }
 }
 
 .cloudCliffThreeContent {
@@ -349,6 +394,13 @@ cite {
   margin-bottom: 1em;
 }
 
+@media screen and (min-width: 768px) {
+  .ctacopy {
+    font-size: 1.625rem;
+    line-height: 1.725rem;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .ctacopy {
     font-size: 1.75rem;
@@ -386,6 +438,14 @@ footer a {
   justify-content: center;
 }
 
+@media screen and (min-width: 768px) {
+  .btnWrapper {
+    width: 5em;
+    height: 5em;
+    margin-top: 8.4em;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .btnWrapper {
     width: 9em;
@@ -398,6 +458,13 @@ footer a {
   align-self: center;
   margin-top: 0.2em;
   margin-left: 0.2em;
+  z-index: 2000;
+}
+
+@media screen and (min-width: 768px) {
+  .btnArrow {
+    max-inline-size: 1.8em;
+  }
 }
 
 .cls1 {
