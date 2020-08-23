@@ -6,11 +6,18 @@
 .masthead {
   position: relative;
   min-height: 20rem;
-  padding: 2rem 0 4rem 3rem;
+  padding: 1.6rem 0 4rem 1.6rem;
   display: flex;
   flex-direction: column;
   border-bottom: 20px solid #ff8d6d;
   z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .masthead {
+    padding: 2rem 0 4rem 3rem;
+    min-height: 20rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -20,26 +27,33 @@
 }
 
 .logo {
-  max-width: 240px;
+  max-width: 7.5em;
   margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    max-width: 15em;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .logo {
-    margin-bottom: 8rem;
+    margin-bottom: 8em;
   }
 }
 
 .title {
   font-family: "MetricHPE-Web-Bold", sans-serif;
-  font-size: 8.125rem;
-  line-height: 8.125rem;
+  font-size: 4rem;
+  line-height: 3.6rem;
   color: #fff;
-  margin-top: 4rem;
+  filter: drop-shadow(0 0 10px #333);
 }
 
 @media screen and (min-width: 768px) {
   .title {
+    max-width: 81%;
     font-size: 7.125rem;
     line-height: 6.125rem;
   }
@@ -55,32 +69,35 @@
 
 .subtitle {
   display: block;
-  font-size: 2.75rem;
+  font-size: 1.3rem;
+  line-height: 1.4rem;
 }
 
 @media screen and (min-width: 768px) {
   .subtitle {
     font-size: 2.3rem;
+    line-height: normal;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .subtitle {
     font-size: 3.75rem;
-    line-height: 4.75rem;
   }
 }
 
 h2 {
   font-family: "HPESimpleWeb-Regular", "Courier New", Courier, monospace;
-  font-size: 2.5rem;
-  margin-top: 4em;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-top: 1em;
   margin-bottom: 0.5em;
 }
 
 h3 {
   font-family: "MetricHPE-Web-Bold", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  line-height: 2rem;
   margin-top: 0;
 }
 
@@ -88,6 +105,10 @@ h3 {
   h2,
   h3 {
     font-size: 2.4rem;
+    line-height: 2.4rem;
+  }
+  h2 {
+    margin-top: 4em;
   }
 }
 
@@ -95,7 +116,7 @@ h3 {
   h2,
   h3 {
     font-size: 3rem;
-    line-height: 2rem;
+    line-height: 3rem;
   }
 }
 
@@ -110,15 +131,23 @@ ul {
 
 .introcopy {
   position: relative;
+  max-width: 85%;
+  padding: 2em 1em 2em 1.6em;
+  margin-top: -4em;
   background-color: #2ad2c9;
   color: #425563;
-  padding: 2em 1em 2em 2em;
-  font-size: 28px;
-  max-width: 85%;
-  margin-top: -6em;
+  font-size: 1rem;
+  line-height: 1.2rem;
   z-index: 10;
   border-bottom: 20px solid black;
-  line-height: 1.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .introcopy {
+    font-size: 1.75rem;
+    line-height: 1.8rem;
+    /* margin-top: -6em; */
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -136,7 +165,13 @@ ul {
 }
 
 .listcopy {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .listcopy {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -149,7 +184,13 @@ ul {
 
 ul > li {
   font-family: "HPESimpleWeb-Regular", "Courier New", Courier, monospace;
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  ul > li {
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -170,9 +211,17 @@ Ul > li:before {
 }
 
 blockquote > p {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
   margin-left: 1.8em;
   margin-top: -2.4em;
+}
+
+@media screen and (min-width: 768px) {
+  blockquote > p {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -186,8 +235,14 @@ blockquote::before {
   font-family: "MetricHPE-Web-Black", sans-serif;
   color: #425563;
   content: "“";
-  font-size: 4em;
+  font-size: 3em;
   display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  blockquote::before {
+    font-size: 4.8em;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -203,8 +258,15 @@ blockquote > cite {
 cite {
   font-family: "MetricHPE-Web-Regular", sans-serif;
   font-style: normal;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  cite {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -214,7 +276,13 @@ cite {
 }
 
 .contentList {
-  margin: 4em 0 0 2em;
+  margin: 2em 0 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  .contentList {
+    margin: 4em 0 0 2em;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -233,16 +301,16 @@ cite {
 }
 
 .cloudCliffOneImage {
-  grid-column: 7 / span 6;
+  grid-column: 11 / span 2;
   grid-row: 1;
-  margin-top: -5rem;
+  margin-top: -8rem;
   border-bottom: 20px solid #000;
 }
 
 @media screen and (min-width: 768px) {
   .cloudCliffOneImage {
     grid-column: 8 / span 5;
-    margin-top: -6em;
+    margin-top: -9em;
   }
 }
 
@@ -253,13 +321,19 @@ cite {
 }
 
 .cloudCliffOneContent {
-  grid-column: 2 / span 5;
+  grid-column: 2 / span 8;
   grid-row: 1;
   margin-bottom: 4em;
 }
 
+@media screen and (min-width: 768px) {
+  .cloudCliffOneContent {
+    grid-column: 2 / span 5;
+  }
+}
+
 .cloudCliffOneQuote {
-  grid-column: 3 / span 10;
+  grid-column: 2 / span 11;
   background-color: #2ad2c9;
   color: #425563;
   padding: 4em 3em 3em 3em;
@@ -272,6 +346,13 @@ cite {
     /* right "inner border" */ inset -20px 0 0 0 #ff8d6d;
 }
 
+@media screen and (min-width: 768px) {
+  .cloudCliffOneQuote {
+    grid-column: 3 / span 10;
+    padding: 4em 3em 3em 3em;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .cloudCliffOneQuote {
     grid-column: 4 / span 9;
@@ -280,12 +361,18 @@ cite {
 }
 
 .cloudCliffTwoImage {
-  grid-column: 1 / span 4;
+  grid-column: 1 / span 2;
   grid-row: 3;
   margin-top: -5rem;
   border-bottom: 20px solid #000;
   z-index: -1;
   border-top: 20px solid #ff8d6d;
+}
+
+@media screen and (min-width: 768px) {
+  .cloudCliffTwoImage {
+    grid-column: 1 / span 4;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -295,7 +382,7 @@ cite {
 }
 
 .cloudCliffTwoContent {
-  grid-column: 6 / span 6;
+  grid-column: 4 / span 8;
   grid-row: 3;
   margin-bottom: 4em;
 }
@@ -315,7 +402,7 @@ cite {
 }
 
 .cloudCliffTwoQuote {
-  grid-column: 1 / span 10;
+  grid-column: 1 / span 11;
   background-color: #2ad2c9;
   color: #425563;
   padding: 4em 3em 3em 3em;
@@ -328,6 +415,12 @@ cite {
   z-index: 1000;
 }
 
+@media screen and (min-width: 768px) {
+  .cloudCliffTwoQuote {
+    grid-column: 1 / span 10;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .cloudCliffTwoQuote {
     grid-column: 1 / span 9;
@@ -336,7 +429,7 @@ cite {
 }
 
 .cloudCliffThreeImage {
-  grid-column: 9 / span 4;
+  grid-column: 11 / span 2;
   grid-row: 5;
   margin-top: -5rem;
   border-bottom: 20px solid #000;
@@ -351,13 +444,13 @@ cite {
 }
 
 .cloudCliffThreeContent {
-  grid-column: 2 / span 7;
+  grid-column: 2 / span 8;
   grid-row: 5;
   margin-bottom: 4em;
 }
 
 .cloudCliffThreeQuote {
-  grid-column: 4 / span 9;
+  grid-column: 2 / span 11;
   background-color: #2ad2c9;
   color: #425563;
   padding: 4em 3em 3em 3em;
@@ -366,6 +459,39 @@ cite {
     /* right "inner border" */ inset -20px 0 0 0 #ff8d6d;
   margin: 0;
   z-index: 1000;
+}
+
+@media screen and (min-width: 768px) {
+  .cloudCliffThreeQuote {
+    grid-column: 4 / span 9;
+  }
+}
+
+footer {
+  margin: -4em 0 0 0;
+  padding-bottom: 4em;
+}
+
+footer a {
+  grid-column: 4 / span 9;
+  font-family: "MetricHPE-Web-Regular", sans-serif;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #ff8d6d;
+}
+
+@media screen and (min-width: 768px) {
+  footer a {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  footer a {
+    font-size: 1.7rem;
+    line-height: 1.9rem;
+  }
 }
 
 .cloudCliffFooter {
@@ -382,15 +508,25 @@ cite {
   margin: 8em 0 1em 0;
 }
 
+@media screen and (min-width: 768px) {
+  .ctaWrapper {
+    grid-column: 4 / span 8;
+    grid-row: 1;
+    margin: 8em 0 1em 0;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .ctaWrapper {
     grid-column: 4 / span 6;
+    grid-row: 1;
   }
 }
 
 .ctacopy {
   font-family: "MetricHPE-Web-SemiBold";
-  font-size: 1.625rem;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
   margin-bottom: 1em;
 }
 
@@ -408,28 +544,9 @@ cite {
   }
 }
 
-footer {
-  margin: -4em 0 0 0;
-  padding-bottom: 4em;
-}
-
-footer a {
-  grid-column: 4 / span 9;
-  font-family: "MetricHPE-Web-Regular", sans-serif;
-  font-size: 1.5rem;
-  color: #ff8d6d;
-}
-
-@media screen and (min-width: 1200px) {
-  footer a {
-    font-size: 1.7rem;
-    line-height: 1.9rem;
-  }
-}
-
 .btnWrapper {
-  width: 7em;
-  height: 7em;
+  width: 3em;
+  height: 3em;
   grid-column: 2 / span 2;
   grid-row: 1;
   background-color: #01a982;
@@ -454,7 +571,7 @@ footer a {
 }
 
 .btnArrow {
-  max-inline-size: 2.4em;
+  max-inline-size: 1em;
   align-self: center;
   margin-top: 0.2em;
   margin-left: 0.2em;
@@ -464,6 +581,12 @@ footer a {
 @media screen and (min-width: 768px) {
   .btnArrow {
     max-inline-size: 1.8em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .btnArrow {
+    max-inline-size: 2.4em;
   }
 }
 
