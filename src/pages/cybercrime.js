@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import style from "./cybercrime.module.css"
 import Logo from "../svg/logo.inline.svg"
 import BackgroundImage from "gatsby-background-image"
-import Img from "gatsby-image"
+import BarGraph from "../components/graph"
 
 const CyberCrime = (props) => (
   <Layout>
@@ -19,7 +19,7 @@ const CyberCrime = (props) => (
           </div>
         </header>
         <div>
-          CHART
+          <BarGraph />
         </div>
         <footer className={ style.cybercrimeFooter }>
         <div className={style.btnWrapper}>
