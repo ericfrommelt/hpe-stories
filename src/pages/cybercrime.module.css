@@ -1,0 +1,245 @@
+/* Header */
+.masthead {
+  position: relative;
+  min-height: 20rem;
+  padding: 1.6rem 0 4rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 20px solid #ff8d6d;
+  z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .masthead {
+    padding: 2rem 0 4rem 3rem;
+    min-height: 20rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .masthead {
+    min-height: 60rem;
+  }
+}
+
+.logo {
+  max-width: 7.5em;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    max-width: 15em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-bottom: 8em;
+  }
+}
+
+.title {
+  font-family: "MetricHPE-Web-Bold", sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 3.6rem;
+  color: #fff;
+  filter: drop-shadow(0 0 10px #333);
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    max-width: 81%;
+    font-size: 7.125rem;
+    line-height: 6.125rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 10.125rem;
+    line-height: 10.125rem;
+    max-width: 85%;
+  }
+}
+
+.subtitle {
+  display: block;
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .subtitle {
+    font-size: 2.3rem;
+    line-height: normal;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subtitle {
+    font-size: 4.75rem;
+    line-height: 7rem;
+  }
+}
+
+.introcopy {
+  position: relative;
+  max-width: 85%;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .introcopy {
+    font-size: 1.75rem;
+    line-height: 1.8rem;
+    /* margin-top: -6em; */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .introcopy {
+    font-size: 2rem;
+    line-height: 2rem;
+    max-width: 80%;
+    margin-top: -2em;
+  }
+}
+
+/* Footer */
+footer {
+  margin: -4em 0 0 0;
+  padding-bottom: 4em;
+  background-color: #fff;
+}
+
+footer a {
+  grid-column: 4 / span 9;
+  font-family: "MetricHPE-Web-Regular", sans-serif;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #ff8d6d;
+}
+
+@media screen and (min-width: 768px) {
+  footer a {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  footer a {
+    font-size: 1.7rem;
+    line-height: 1.9rem;
+  }
+}
+
+.cloudCliffFooter {
+  grid-column: 1 / span 12;
+  background-color: #fff;
+  color: #000;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.ctaWrapper {
+  grid-column: 4 / span 8;
+  grid-row: 1;
+  margin: 8em 0 1em 0;
+}
+
+@media screen and (min-width: 768px) {
+  .ctaWrapper {
+    grid-column: 4 / span 8;
+    grid-row: 1;
+    margin: 8em 0 1em 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ctaWrapper {
+    grid-column: 4 / span 6;
+    grid-row: 1;
+  }
+}
+
+.ctacopy {
+  font-family: "MetricHPE-Web-SemiBold";
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .ctacopy {
+    font-size: 1.625rem;
+    line-height: 1.725rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ctacopy {
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+  }
+}
+
+.btnWrapper {
+  width: 3em;
+  height: 3em;
+  grid-column: 2 / span 2;
+  grid-row: 1;
+  background-color: #01a982;
+  margin-top: 8em;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .btnWrapper {
+    width: 5em;
+    height: 5em;
+    margin-top: 8.4em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .btnWrapper {
+    width: 9em;
+    height: 9em;
+  }
+}
+
+.btnArrow {
+  width: 100%;
+  max-inline-size: 1em;
+  align-self: center;
+  margin-top: 0.2em;
+  margin-left: 0.2em;
+  z-index: 2000;
+}
+
+@media screen and (min-width: 768px) {
+  .btnArrow {
+    max-inline-size: 1.8em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .btnArrow {
+    max-inline-size: 2.4em;
+  }
+}
+
+.cls1 {
+  max-width: 50%;
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 4px;
+  padding: 2em;
+}
