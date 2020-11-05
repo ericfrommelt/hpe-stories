@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import style from "./cybercrime.module.css"
 import Logo from "../svg/logo.inline.svg"
 import BackgroundImage from "gatsby-background-image"
+import ParentSize from "@visx/responsive/lib/components/ParentSize"
 import BarGraph from "../components/graph"
 
 const CyberCrime = (props) => (
@@ -18,8 +19,8 @@ const CyberCrime = (props) => (
             <p className={ style.introcopy }>Cyber crime is pervasive. Here are the most frequent types of attacks on business and how long it takes to bounce back, based on our survey of 237 organizations in six countries.</p>
           </div>
         </header>
-        <div>
-          <BarGraph />
+        <div className={ style.graphContainer }>
+          <ParentSize>{({ width, height }) => <BarGraph width={width} height={height} />}</ParentSize>
         </div>
         <footer className={ style.cybercrimeFooter }>
         <div className={style.btnWrapper}>

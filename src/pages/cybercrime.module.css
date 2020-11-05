@@ -109,6 +109,11 @@
   }
 }
 
+/* graph */
+.graphContainer {
+  height: 40em;
+}
+
 /* Footer */
 footer {
   margin: -4em 0 0 0;

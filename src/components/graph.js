@@ -4,55 +4,57 @@ import { Group } from "@visx/group";
 import { Bar } from "@visx/shape";
 import { scaleLinear, scaleBand } from "@visx/scale";
 
-const data = letterFrequency;
-const width = 1000;
-const height = 500;
-const margin = { top: 20, bottom: 20, left: 20, right: 20 };
-const xMax = width - margin.left - margin.right;
-const yMax = height - margin.top - margin.bottom;
+const data = letterFrequency.slice(5);
+const verticalMargin = 120;
 
 // data helpers
-const x = d => d.letter;
-const y = d => +d.frequency * 100;
+const getLetter = d => d.letter;
+const getLetterFrequency = d => +d.frequency * 100;
 
-// Scale graph by data
-const xScale = scaleBand({
-  range: [0, xMax],
-  round: true,
-  domain: data.map(x),
-  padding: 0.4,
-});
+export type BarsProps = {
+  width: Number;
+  height: Number;
+};
 
-const yScale = scaleLinear({
-  range: [yMax, 0],
-  round: true,
-  domain: [0, Math.max(...data.map(y))],
-})
+export default function BarGraph({ width, height }: BarsProps) {
+  // Set the bounds
+  const xMax = width;
+  const yMax = height - verticalMargin;
 
-// Compose the scale and accessor functions to get the point functions
-const compose = (scale, accessor) => data => scale(accessor(data));
-const xPoint = compose(xScale, x);
-const yPoint = compose(yScale, y);
+  const xScale = scaleBand({
+    range: [0, xMax],
+    round: true,
+    domain: data.map(getLetter),
+    padding: 0.4,
+  });
 
-function BarGraph(props) {
+  const yScale = scaleLinear({
+    range: [yMax, 0],
+    round: true,
+    domain: [0, Math.max(...data.map(getLetterFrequency))],
+  });
+  
   return (
     <svg width={width} height={height}>
-      { data.map((d, i) => {
-        const barHeight = yMax - yPoint(d);
+      <Group top={verticalMargin / 2}>
+        {data.map(d => {
+          const letter = getLetter(d);
+          const barHeight = yMax - (yScale(getLetterFrequency(d)) ?? 0);
+          const barWidth = xScale.bandwidth();
+          const barX = xScale(letter);
+          const barY = yMax - barHeight;
           return (
-            <Group key={`bar-${i}`}>
-              <Bar
-                x={xPoint(d)}
-                y={yMax - barHeight}
-                height={barHeight}
-                width={xScale.bandwidth()}
-                fill="#2ad2c9"
-              />
-            </Group>
-          );
-        })}
+            <Bar
+            key={`bar-${letter}`}
+            x={barX}
+            y={barY}
+            width={barWidth}
+            height={barHeight}
+            fill="rgba(42, 210, 201, 1)"
+            />
+            );
+          })}
+      </Group>
     </svg>
   );
 }
-
-export default BarGraph;
