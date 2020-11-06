@@ -2,23 +2,22 @@
 .masthead {
   position: relative;
   min-height: 20rem;
-  padding: 1.6rem 0 4rem 1.6rem;
+  padding: 1.6rem 0 0 1.6rem;
   display: flex;
   flex-direction: column;
-  border-bottom: 20px solid #ff8d6d;
   z-index: 1;
 }
 
 @media screen and (min-width: 768px) {
   .masthead {
-    padding: 2rem 0 4rem 3rem;
+    padding: 2rem 0 0 3rem;
     min-height: 20rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .masthead {
-    min-height: 60rem;
+    min-height: 50rem;
   }
 }
 

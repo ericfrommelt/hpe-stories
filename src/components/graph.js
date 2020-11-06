@@ -1,15 +1,15 @@
 import React from "react";
-import { letterFrequency } from "@visx/mock-data"
+import JSONData from "../data/impact-data.json";
 import { Group } from "@visx/group";
 import { Bar } from "@visx/shape";
 import { scaleLinear, scaleBand } from "@visx/scale";
 
-const data = letterFrequency.slice(5);
+const data = JSONData.content;
 const verticalMargin = 120;
 
 // data helpers
-const getLetter = d => d.letter;
-const getLetterFrequency = d => +d.frequency * 100;
+const getItem = d => d.item;
+const getPercentage = d => +d.percentage * 100;
 
 export type BarsProps = {
   width: Number;
@@ -24,28 +24,28 @@ export default function BarGraph({ width, height }: BarsProps) {
   const xScale = scaleBand({
     range: [0, xMax],
     round: true,
-    domain: data.map(getLetter),
-    padding: 0.4,
+    domain: data.map(getItem),
+    padding: 0.8,
   });
 
   const yScale = scaleLinear({
     range: [yMax, 0],
     round: true,
-    domain: [0, Math.max(...data.map(getLetterFrequency))],
+    domain: [0, Math.max(...data.map(getPercentage))],
   });
   
   return (
     <svg width={width} height={height}>
       <Group top={verticalMargin / 2}>
         {data.map(d => {
-          const letter = getLetter(d);
-          const barHeight = yMax - (yScale(getLetterFrequency(d)) ?? 0);
+          const item = getItem(d);
+          const barHeight = yMax - (yScale(getPercentage(d)) ?? 0);
           const barWidth = xScale.bandwidth();
-          const barX = xScale(letter);
+          const barX = xScale(item);
           const barY = yMax - barHeight;
           return (
             <Bar
-            key={`bar-${letter}`}
+            key={`bar-${item}`}
             x={barX}
             y={barY}
             width={barWidth}

@@ -1,0 +1,12 @@
+{
+  "content": [
+    { "item": "Malware Ransomware", "percentage": 98 },
+    { "item": "Phishing & social engineering", "percentage": 70 },
+    { "item": "Web-based attacks", "percentage": 63 },
+    { "item": "Malicious code", "percentage": 61 },
+    { "item": "Botnets", "percentage": 55 },
+    { "item": "Stolen devices", "percentage": 50 },
+    { "item": "Denial of Services", "percentage": 49 },
+    { "item": "Malicious insiders", "percentage": 41 }
+  ]
+}
