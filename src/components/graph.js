@@ -3,6 +3,7 @@ import JSONData from "../data/impact-data.json";
 import { Group } from "@visx/group";
 import { Bar } from "@visx/shape";
 import { scaleLinear, scaleBand } from "@visx/scale";
+import { Text } from "@visx/text";
 
 const data = JSONData.content;
 const verticalMargin = 120;
@@ -43,7 +44,10 @@ export default function BarGraph({ width, height }: BarsProps) {
           const barWidth = xScale.bandwidth();
           const barX = xScale(item);
           const barY = yMax - barHeight;
+          const textYPosition = height - 90;
+          const textWidth = 140;
           return (
+            <>
             <Bar
             key={`bar-${item}`}
             x={barX}
@@ -52,6 +56,18 @@ export default function BarGraph({ width, height }: BarsProps) {
             height={barHeight}
             fill="rgba(42, 210, 201, 1)"
             />
+            <Text
+            key={`text-${item}`}
+            x={barX + barWidth/2}
+            y={textYPosition}
+            textAnchor="middle"
+            verticalAnchor="middle"
+            fill="rgba(255, 255, 255, 1)"
+            fontFamily="MetricHPE-Web-Regular"
+            fontSize="1em"
+            width={textWidth}
+            >{item}</Text>
+            </>
             );
           })}
       </Group>

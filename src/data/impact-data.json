@@ -1,6 +1,6 @@
 {
   "content": [
-    { "item": "Malware Ransomware", "percentage": 98 },
+    { "item": "Malware & Ransomware", "percentage": 98 },
     { "item": "Phishing & social engineering", "percentage": 70 },
     { "item": "Web-based attacks", "percentage": 63 },
     { "item": "Malicious code", "percentage": 61 },
