@@ -10,7 +10,7 @@ const verticalMargin = 120;
 
 // data helpers
 const getItem = d => d.item;
-const getPercentage = d => +d.percentage * 100;
+const getPercentage = d => d.percentage;
 
 export type BarsProps = {
   width: Number;
@@ -40,12 +40,15 @@ export default function BarGraph({ width, height }: BarsProps) {
       <Group top={verticalMargin / 2}>
         {data.map(d => {
           const item = getItem(d);
+          const percentage = getPercentage(d) + "%";
           const barHeight = yMax - (yScale(getPercentage(d)) ?? 0);
           const barWidth = xScale.bandwidth();
           const barX = xScale(item);
           const barY = yMax - barHeight;
           const textYPosition = height - 90;
+          const percentagePosition = height - barHeight - 150;
           const textWidth = 140;
+          console.log(d);
           return (
             <>
             <Bar
@@ -56,6 +59,18 @@ export default function BarGraph({ width, height }: BarsProps) {
             height={barHeight}
             fill="rgba(42, 210, 201, 1)"
             />
+            <Text
+            key={`bar-${percentage}`}
+            x={barX + barWidth/2}
+            y={percentagePosition}
+            dx={8}
+            dy
+            textAnchor="middle"
+            verticalAnchor="middle"
+            fill="rgba(255, 255, 255, 1)"
+            font-family="HPESimpleWeb-Regular"
+            fontSize="1.5em"
+            >{percentage}</Text>
             <Text
             key={`text-${item}`}
             x={barX + barWidth/2}
