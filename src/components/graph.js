@@ -48,11 +48,11 @@ export default function BarGraph({ width, height }: BarsProps) {
           const textYPosition = height - 90;
           const percentagePosition = height - barHeight - 150;
           const textWidth = 140;
+          const labelText = "% of companies impacted over a four-week span";
 
           return (
             <>
               <Bar
-                key={`bar-${item}`}
                 x={barX}
                 y={barY}
                 width={barWidth}
@@ -60,7 +60,6 @@ export default function BarGraph({ width, height }: BarsProps) {
                 fill="rgba(42, 210, 201, 1)"
               />
               <Text
-                key={`bar-${percentage}`}
                 x={barX + barWidth/2}
                 y={percentagePosition}
                 dx={8}
@@ -71,16 +70,23 @@ export default function BarGraph({ width, height }: BarsProps) {
                 fontSize="1.5em"
               >{percentage}</Text>
               <Text
-                key={`text-${item}`}
                 x={barX + barWidth/2}
                 y={textYPosition}
                 textAnchor="middle"
                 verticalAnchor="middle"
                 fill="rgba(255, 255, 255, 1)"
                 fontFamily="MetricHPE-Web-Regular"
-                fontSize="1em"
+                fontSize="1.1em"
                 width={textWidth}
               >{item}</Text>
+              <Text
+                x={width/2}
+                y={height/6}
+                width={220}
+                fontFamily="MetricHPE-Web-Regular"
+                fontSize="1.3em"
+                fill="rgba(42, 210, 201, 1)"
+              >{labelText}</Text>
             </>
             );
           })}

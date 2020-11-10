@@ -49,6 +49,7 @@ export default function GraphBottom({ width, height }: BarsProps) {
           const barWidth = xScale.bandwidth();
           const barX = xScale(item);
           const textYPosition = 0 + barHeight;
+          const labelText = "Average time it took to recover";
           
           return (
             <>
@@ -88,7 +89,15 @@ export default function GraphBottom({ width, height }: BarsProps) {
                 fontFamily="HPESimpleWeb-Regular"
                 fontSize="1.5em"
                 lineHeight="2em"
-          >{dayType}</Text>
+              >{dayType}</Text>
+              <Text
+                x={width/6}
+                y={height-200}
+                width={140}
+                fontFamily="MetricHPE-Web-Regular"
+                fontSize="1.3em"
+                fill="rgba(255, 141, 109, 1)"
+              >{labelText}</Text>
             </>
             );
           })}

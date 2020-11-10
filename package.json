@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@visx/group": "^1.0.0",
+    "@visx/legend": "^1.1.0",
     "@visx/mock-data": "^1.0.0",
     "@visx/pattern": "^1.1.0",
     "@visx/responsive": "^1.1.0",
