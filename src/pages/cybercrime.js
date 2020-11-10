@@ -6,6 +6,7 @@ import Logo from "../svg/logo.inline.svg"
 import BackgroundImage from "gatsby-background-image"
 import ParentSize from "@visx/responsive/lib/components/ParentSize"
 import BarGraph from "../components/graph"
+import GraphBottom from "../components/graph-bottom"
 
 const CyberCrime = (props) => (
   <Layout>
@@ -21,6 +22,9 @@ const CyberCrime = (props) => (
         </header>
         <div className={ style.graphContainer }>
           <ParentSize>{({ width, height }) => <BarGraph width={width} height={height} />}</ParentSize>
+        </div>
+        <div className={ style.graphContainer }>
+          <ParentSize>{({ width, height }) => <GraphBottom width={width} height={height} />}</ParentSize>
         </div>
         <footer className={ style.cybercrimeFooter }>
         <div className={style.btnWrapper}>

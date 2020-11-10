@@ -1,12 +1,12 @@
 {
   "content": [
-    { "item": "Malware & Ransomware", "percentage": 98 },
-    { "item": "Phishing & social engineering", "percentage": 70 },
-    { "item": "Web-based attacks", "percentage": 63 },
-    { "item": "Malicious code", "percentage": 61 },
-    { "item": "Botnets", "percentage": 55 },
-    { "item": "Stolen devices", "percentage": 50 },
-    { "item": "Denial of Services", "percentage": 49 },
-    { "item": "Malicious insiders", "percentage": 41 }
+    { "item": "Malware & Ransomware", "percentage": 98, "days": 5.6 },
+    { "item": "Phishing & social engineering", "percentage": 70, "days": 19.8 },
+    { "item": "Web-based attacks", "percentage": 63, "days": 25.3 },
+    { "item": "Malicious code", "percentage": 61, "days": 49.6 },
+    { "item": "Botnets", "percentage": 55, "days": 2.0 },
+    { "item": "Stolen devices", "percentage": 50, "days": 13.7 },
+    { "item": "Denial of Services", "percentage": 49, "days": 17.8 },
+    { "item": "Malicious insiders", "percentage": 41, "days": 51.5 }
   ]
 }

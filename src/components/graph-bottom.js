@@ -4,21 +4,23 @@ import { Group } from "@visx/group";
 import { Bar } from "@visx/shape";
 import { scaleLinear, scaleBand } from "@visx/scale";
 import { Text } from "@visx/text";
+import { PatternLines } from "@visx/pattern";
 
 const data = JSONData.content;
 const verticalMargin = 120;
 
 // data helpers
 const getItem = d => d.item;
-const getPercentage = d => d.percentage;
+const getDays = d => d.days;
 
 export type BarsProps = {
   width: Number;
   height: Number;
 };
 
-export default function BarGraph({ width, height }: BarsProps) {
+export default function GraphBottom({ width, height }: BarsProps) {
 
+  // Set the bounds
   const xMax = width;
   const yMax = height - verticalMargin;
 
@@ -32,55 +34,61 @@ export default function BarGraph({ width, height }: BarsProps) {
   const yScale = scaleLinear({
     range: [yMax, 0],
     round: true,
-    domain: [0, Math.max(...data.map(getPercentage))],
+    domain: [0, Math.max(...data.map(getDays))],
   });
 
   return (
     <svg width={width} height={height}>
-      <Group top={verticalMargin / 2}>
+      <Group>
         {data.map(d => {
+
           const item = getItem(d);
-          const percentage = getPercentage(d) + "%";
-          const barHeight = yMax - (yScale(getPercentage(d)) ?? 0);
+          const day = getDays(d);
+          const dayType = "Days";
+          const barHeight = yMax - (yScale(getDays(d)) ?? 0);
           const barWidth = xScale.bandwidth();
           const barX = xScale(item);
-          const barY = yMax - barHeight;
-          const textYPosition = height - 90;
-          const percentagePosition = height - barHeight - 150;
-          const textWidth = 140;
-
+          const textYPosition = 0 + barHeight;
+          
           return (
             <>
+              <PatternLines
+                id="lines"
+                height={5}
+                width={5}
+                stroke="rgba(255, 141, 109)"
+                strokeWidth={1}
+                orientation={['horizontal']}
+              />
               <Bar
-                key={`bar-${item}`}
                 x={barX}
-                y={barY}
+                y={0}
                 width={barWidth}
                 height={barHeight}
-                fill="rgba(42, 210, 201, 1)"
+                fill="url('#lines')"
               />
               <Text
-                key={`bar-${percentage}`}
                 x={barX + barWidth/2}
-                y={percentagePosition}
-                dx={8}
+                y={textYPosition}
+                dy={28}
                 textAnchor="middle"
                 verticalAnchor="middle"
                 fill="rgba(255, 255, 255, 1)"
                 fontFamily="HPESimpleWeb-Regular"
                 fontSize="1.5em"
-              >{percentage}</Text>
+                lineHeight="2em"
+              >{day}</Text>
               <Text
-                key={`text-${item}`}
                 x={barX + barWidth/2}
                 y={textYPosition}
+                dy={64}
                 textAnchor="middle"
                 verticalAnchor="middle"
                 fill="rgba(255, 255, 255, 1)"
-                fontFamily="MetricHPE-Web-Regular"
-                fontSize="1em"
-                width={textWidth}
-              >{item}</Text>
+                fontFamily="HPESimpleWeb-Regular"
+                fontSize="1.5em"
+                lineHeight="2em"
+          >{dayType}</Text>
             </>
             );
           })}
