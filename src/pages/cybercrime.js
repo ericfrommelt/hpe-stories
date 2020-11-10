@@ -23,22 +23,23 @@ const CyberCrime = (props) => (
         <div className={ style.graphContainer }>
           <ParentSize>{({ width, height }) => <BarGraph width={width} height={height} />}</ParentSize>
         </div>
-        <div className={ style.graphContainer }>
+        <div className={ style.graphContainerBottom }>
           <ParentSize>{({ width, height }) => <GraphBottom width={width} height={height} />}</ParentSize>
         </div>
         <footer className={ style.cybercrimeFooter }>
-        <div className={style.btnWrapper}>
-          <div className={ style.btnArrow }>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.24 82.83">
-              <title>transformationCTA_Arrow</title>
-              <g id="Layer_2" data-name="Layer 2"><g id="Content"><polyline className={ style.cls1 } points="1.41 1.41 41.41 41.41 1.41 81.41"/></g></g></svg>
+          <div className={style.footerBar}></div>
+          <div className={style.btnWrapper}>
+            <div className={ style.btnArrow }>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.24 82.83">
+                <title>transformationCTA_Arrow</title>
+                <g id="Layer_2" data-name="Layer 2"><g id="Content"><polyline className={ style.cls1 } points="1.41 1.41 41.41 41.41 1.41 81.41"/></g></g></svg>
+            </div>
           </div>
-        </div>
-        <div className={style.ctaWrapper}>
-          <p className={style.ctacopy}>Get the details on how to raise your security profile and drive innovation. Download the full report from Ponemon Institute:</p>
-          <a href="">Cost of Cyber Crime Study &amp; the Risk of Business Innovation</a>
-        </div>
-      </footer>
+          <div className={style.ctaWrapper}>
+            <p className={style.ctacopy}>Get the details on how to raise your security profile and drive innovation. Download the full report from Ponemon Institute:</p>
+            <a href="">Cost of Cyber Crime Study &amp; the Risk of Business Innovation</a>
+          </div>
+        </footer>
       </BackgroundImage>
   </Layout>
 )
