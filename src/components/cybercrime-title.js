@@ -57,7 +57,7 @@ const CybercrimeTitle = () => {
           <rect x="117" y="320" width="8" height="8"/>
           <rect x="129" y="320" width="8" height="8"/>
         </g>
-        <g>
+        <g id="blocks-02" fill="#2ad2c9">
           <rect x="1087" y="376" width="8" height="8"/>
           <rect x="1099" y="376" width="8" height="8"/>
           <rect x="1111" y="376" width="8" height="8"/>
@@ -91,7 +91,7 @@ const CybercrimeTitle = () => {
           <rect x="1159" y="412" width="8" height="8"/>
           <rect x="1171" y="412" width="8" height="8"/>
         </g>
-        <g>
+        <g id="blocks-03" fill="#2ad2c9">
           <rect x="862" y="609" width="8" height="8"/>
           <rect x="874" y="609" width="8" height="8"/>
           <rect x="886" y="609" width="8" height="8"/>
@@ -103,7 +103,7 @@ const CybercrimeTitle = () => {
           <rect x="898" y="621" width="8" height="8"/>
           <rect x="910" y="621" width="8" height="8"/>
         </g>
-        <g>
+        <g id="blocks-04" fill="#2ad2c9">
           <rect x="1073" y="897" width="8" height="8"/>
           <rect x="1085" y="897" width="8" height="8"/>
           <rect x="1097" y="897" width="8" height="8"/>
@@ -114,7 +114,7 @@ const CybercrimeTitle = () => {
           <rect x="1085" y="921" width="8" height="8"/>
           <rect x="1097" y="921" width="8" height="8"/>
         </g>
-        <g>
+        <g id="blocks-05" fill="#2ad2c9">
           <rect x="333" y="373" width="8" height="8"/>
           <rect x="345" y="373" width="8" height="8"/>
           <rect x="357" y="373" width="8" height="8"/>
@@ -125,7 +125,7 @@ const CybercrimeTitle = () => {
           <rect x="345" y="397" width="8" height="8"/>
           <rect x="357" y="397" width="8" height="8"/>
         </g>
-        <g>
+        <g id="blocks-06" fill="#2ad2c9">
           <rect x="189" y="765" width="8" height="8"/>
           <rect x="201" y="765" width="8" height="8"/>
           <rect x="213" y="765" width="8" height="8"/>
