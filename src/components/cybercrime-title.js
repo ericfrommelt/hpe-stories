@@ -1,5 +1,9 @@
 import React, { useRef, useEffect } from 'react';
-import { gsap, TweenMax, TimelineMax } from 'gsap/dist/gsap';
+import { gsap } from 'gsap';
+import { TweenMax, TimelineMax } from 'gsap';
+import CustomEase from 'gsap/CustomEase.js';
+gsap.registerPlugin(CustomEase);
+
 
 const CybercrimeTitle = () => {
   const svgWrapper = useRef(null);
@@ -10,8 +14,17 @@ const CybercrimeTitle = () => {
     const blocksOne = svgElements.querySelector("#blocks-01");
     const greenBarOne = svgElements.querySelector("#greenBarOne");
 
+    CustomEase.create("typeEase", "M0,0 C0.126,0.382 0.282,0.674 0.44,0.822 0.632,1.002 0.818,1.001 1,1 ");
+
+    gsap.set("#c1", {x: 100, y: 60});
+    gsap.set("#c2", {x: -20});
     gsap.to(blocksOne, 1, {x: 200});
     gsap.to(greenBarOne, 1, {x: 400});
+
+    tl.to("#c1", .5, {x: 0, ease: "typeEase"})
+      .to("#c1", .5, {y: 0, ease: "typeEase"}, "_+=0.5")
+      .to("#c2", 1, {x: 0, ease: "typeEase"}, "-=0.5")
+      .to("#c3", 1, {x: -50, ease: "typeEase"}, "-=0.5");
 
   }, []);
   
@@ -164,9 +177,9 @@ const CybercrimeTitle = () => {
           <rect x="1020" y="693" width="50" height="140"/>
         </g>
         <g id="_01-cyber-c" data-name="01-cyber-c" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4">
-          <polyline points="30 403 30 443 50 463 230 463 240 453"/>
-          <polyline points="240 173 230 163 50 163 30 183 30 243"/>
-          <line x1="80" y1="243" x2="80" y2="403"/>
+          <polyline id="c1" points="30 403 30 443 50 463 230 463 240 453"/>
+          <polyline id="c2" points="240 173 230 163 50 163 30 183 30 243"/>
+          <line id="c3" x1="80" y1="243" x2="80" y2="403"/>
         </g>
         <g id="_01-cyber-y" data-name="01-cyber-y" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4">
           <polyline points="408.34 263.25 390 303 360 303 330 303 270 173 260 173 260 163"/>
