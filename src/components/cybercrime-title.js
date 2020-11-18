@@ -7,24 +7,236 @@ gsap.registerPlugin(CustomEase);
 
 const CybercrimeTitle = () => {
   const svgWrapper = useRef(null);
-  const tl = new TimelineMax();
-
+  
   useEffect(() => {
     const [svgElements] = svgWrapper.current.children;
     const blocksOne = svgElements.querySelector("#blocks-01");
     const greenBarOne = svgElements.querySelector("#greenBarOne");
 
-    CustomEase.create("typeEase", "M0,0 C0.126,0.382 0.282,0.674 0.44,0.822 0.632,1.002 0.818,1.001 1,1 ");
-
+    const master = gsap.timeline();
+    
+    CustomEase.create("typeEase", "M0,0 C0.036,0.592 -0.094,1 0.59,1 0.701,1 0.818,1.001 1,1 ");
+    
+    // Set initial position of elements
     gsap.set("#c1", {x: 100, y: 60});
     gsap.set("#c2", {x: -20});
-    gsap.to(blocksOne, 1, {x: 200});
-    gsap.to(greenBarOne, 1, {x: 400});
+    gsap.set("#y1", {x: -100, y: 20});
+    gsap.set("#y2", {x: 20, y: -20});
+    gsap.set("#y3", {x: 100, y: 20});
+    gsap.set("#y4", {x: -20, y: -20});
+    gsap.set("#y5", {x: -60, y: -120});
+    gsap.set("#b1", {x: -60, y: 20});
+    gsap.set("#b2", {x: -160, y: 0});
+    gsap.set("#b3", {x: 10, y: 20});
+    gsap.set("#b4", {x: 0, y: -20});
+    gsap.set("#b5", {x: 0, y: 0});
+    gsap.set("#b7", {x: -120, y: 0});
+    gsap.set("#b9", {x: 0, y: 0});
+    gsap.set("#e1", {x: 40, y: 20});
+    gsap.set("#e2", {x: 40, y: 20});
+    gsap.set("#e3", {x: -60, y: -40});
+    gsap.set("#e4", {x: 140, y: -40});
+    gsap.set("#r1", {x: 10, y: -40});
+    gsap.set("#r2", {x: 0, y: -60});
+    gsap.set("#r3", {x: 60, y: 40});
+    gsap.set("#r5", {x: 20, y: 40});
+    gsap.set("#cc1", {x: -20, y: 20});
+    gsap.set("#cc2", {x: -20, y: -10});
+    gsap.set("#cc3", {x: 0, y: 100});
+    gsap.set("#rr1", {x: 60, y: 60});
+    gsap.set("#rr2", {x: 0, y: 100});
+    gsap.set("#rr3", {x: 100, y: 0});
+    gsap.set("#rr4", {x: -20, y: 20});
+    gsap.set("#i1", {x: -20, y: 20});
+    gsap.set("#i2", {x: -20, y: 20});
+    gsap.set("#i3", {x: 40, y: 0});
+    gsap.set("#i4", {x: 80, y: 0});
+    gsap.set("#i5", {x: -20, y: 20});
+    gsap.set("#i6", {x: 40, y: -40});
+    gsap.set("#m1", {x: 40, y: 80});
+    gsap.set("#m2", {x: 40, y: 0});
+    gsap.set("#m3", {x: 0, y: -30});
+    gsap.set("#m4", {x: -20, y: 0});
+    gsap.set("#m8", {x: -20, y: 20});
+    gsap.set("#ee1", {x: -20, y: 20});
+    gsap.set("#ee2", {x: 0, y: 60});
+    gsap.set("#ee3", {x: 0, y: -20});
+    gsap.set("#ee5", {x: 40, y: 20});
 
-    tl.to("#c1", .5, {x: 0, ease: "typeEase"})
-      .to("#c1", .5, {y: 0, ease: "typeEase"}, "_+=0.5")
-      .to("#c2", 1, {x: 0, ease: "typeEase"}, "-=0.5")
-      .to("#c3", 1, {x: -50, ease: "typeEase"}, "-=0.5");
+    gsap.to(blocksOne, 1, {x: 200});
+    gsap.to(greenBarOne, 1, {x: 400, ease: "typeEase"});
+    
+    // Timelines
+    // [C]
+    function timelineC1() {
+      const tl = new TimelineMax();
+      tl.to("#c1", .5, {x: 0, ease: "typeEase"})
+        .to("#c1", .75, {y: 0, ease: "typeEase"}, "_+=0.5")
+        .to("#c2", .75, {x: 0, ease: "typeEase"}, "-=0.5")
+        .to("#c3", .75, {x: -50, ease: "typeEase"}, "-=0.5");
+      return tl;
+    }
+    // [Y]
+    function timelineY1() {
+      const tl = new TimelineMax();
+      tl.to("#y1", .50, {x: 0, ease: "typeEase"})
+        .to("#y1", .75, {y: 0, ease: "typeEase"})
+        .to("#y2", .50, {x: 0, ease: "typeEase"})
+        .to("#y2", .75, {y: 0, ease: "typeEase"})
+        .to("#y3", .50, {x: 0, ease: "typeEase"})
+        .to("#y3", .75, {y: 0, ease: "typeEase"})
+        .to("#y4", .50, {x: 0, ease: "typeEase"})
+        .to("#y4", .75, {y: 0, ease: "typeEase"})
+        .to("#y5", .50, {x: -35, ease: "typeEase"})
+        .to("#y5", .75, {y: 0, ease: "typeEase"})
+        .to("#y6", .75, {x: -20, ease: "typeEase"});
+        
+      return tl;
+    }
+    // [B]
+    function timelineB1() {
+      const tl = new TimelineMax();
+      tl.to("#b1", .50, {x: 0, ease: "typeEase"})
+        .to("#b1", .75, {y: 0, ease: "typeEase"})
+        .to("#b2", .50, {x: 0, ease: "typeEase"})
+        .to("#b2", .75, {y: 0, ease: "typeEase"})
+        .to("#b3", .50, {x: 0, ease: "typeEase"}, "-=0.5")
+        .to("#b3", .75, {y: 0, ease: "typeEase"}, "-=0.5")
+        .to("#b4", .50, {x: 0, ease: "typeEase"}, "-=0.5")
+        .to("#b4", .75, {y: 0, ease: "typeEase"}, "-=0.5")
+        .to("#b7", .75, {x: 20, ease: "typeEase"}, "-=0.5")
+        .to("#b8", .75, {y: -10, ease: "typeEase"})
+        .to("#b9", .75, {x: -50, ease: "typeEase"}, "-=1");
+        
+      return tl;
+    }
+    // [E]
+    function timelineE1() {
+      const tl = new TimelineMax();
+      tl.to("#e1", .50, {x: 0, ease: "typeEase"})
+        .to("#e1", .75, {y: 0, ease: "typeEase"})
+        .to("#e2", .50, {x: 0, ease: "typeEase"})
+        .to("#e2", .75, {y: 0, ease: "typeEase"})
+        .to("#e3", .50, {x: 0, ease: "typeEase"}, "-=0.5")
+        .to("#e3", .75, {y: 0, ease: "typeEase"}, "-=0.5")
+        .to("#e4", .50, {x: 0, ease: "typeEase"}, "-=0.5")
+        .to("#e4", .75, {y: 0, ease: "typeEase"})
+        .to("#e7", .75, {y: -50, ease: "typeEase"}, "-=0.5")
+        .to("#e8", .75, {y: 10, ease: "typeEase"}, "-=0.5")
+        .to("#e10", .75, {x: -40, ease: "typeEase"}, "-=0.5")
+        .to("#e9", .75, {y: -10, ease: "typeEase"}, "-=0.5");
+
+      return tl;
+    }
+    // [R]
+    function timelineR1() {
+      const tl = new TimelineMax();
+      tl.to("#r1", .50, {x: 0, ease: "typeEase"})
+        .to("#r1", .75, {y: 0, ease: "typeEase"})
+        .to("#r2", .50, {y: 0, ease: "typeEase"})
+        .to("#r3", .50, {x: 0, ease: "typeEase"}, "-=0.5")
+        .to("#r3", .75, {y: 0, ease: "typeEase"}, "-=0.5")
+        .to("#r5", .50, {x: 0, ease: "typeEase"}, "-=0.5")
+        .to("#r5", .75, {y: 0, ease: "typeEase"})
+        .to("#r7", .75, {y: 20, ease: "typeEase"})
+        .to("#r6", .75, {x: -20, ease: "typeEase"});
+
+      return tl;
+    }
+    // [C]
+    function timelineCc1() {
+      const tl = new TimelineMax();
+      tl.to("#cc1", .50, {x: 0, ease: "typeEase"})
+        .to("#cc1", .75, {y: 0, ease: "typeEase"})
+        .to("#cc2", .50, {x: 0, ease: "typeEase"})
+        .to("#cc2", .50, {y: 0, ease: "typeEase"})
+        .to("#cc3", .75, {y: 0, ease: "typeEase"}, "-=0.5")
+        .to("#cc4", .75, {x: -20, ease: "typeEase"}, "-=0.5")
+        .to("#cc5", .75, {y: 30, ease: "typeEase"}, "-=0.5");
+
+      return tl;
+    }
+    // [R]
+    function timelineRr1() {
+      const tl = new TimelineMax();
+      tl.to("#rr1", .50, {x: 0, ease: "typeEase"})
+        .to("#rr1", .75, {y: 0, ease: "typeEase"})
+        .to("#rr2", .50, {y: 0, ease: "typeEase"})
+        .to("#rr3", .75, {y: 0, ease: "typeEase"}, "-=0.5")
+        .to("#rr3", .75, {x: 0, ease: "typeEase"}, "-=0.5")
+        .to("#rr4", .75, {x: 0, ease: "typeEase"}, "-=0.5")
+        .to("#rr4", .75, {y: 0, ease: "typeEase"}, "-=0.5")
+        .to("#rr7", .75, {y: 30, ease: "typeEase"}, "-=0.5")
+        .to("#rr6", .75, {x: -20, ease: "typeEase"}, "-=0.5");
+
+      return tl;
+    }
+
+    // [I]
+    function timelineI() {
+      const tl = new TimelineMax();
+      tl.to("#i1", .50, {x: 0, ease: "typeEase"})
+        .to("#i1", .75, {y: 0, ease: "typeEase"})
+        .to("#i2", .50, {x: 0, ease: "typeEase"})
+        .to("#i2", .50, {y: 0, ease: "typeEase"})
+        .to("#i3", .75, {x: 0, ease: "typeEase"}, "-=0.5")
+        .to("#i4", .75, {x: 0, ease: "typeEase"}, "-=0.5")
+        .to("#i5", .75, {x: 0, ease: "typeEase"}, "-=0.5")
+        .to("#i5", .75, {y: 0, ease: "typeEase"}, "-=0.5")
+        .to("#i6", .75, {x: 0, ease: "typeEase"}, "-=0.5")
+        .to("#i6", .75, {y: 0, ease: "typeEase"}, "-=0.5")
+        .to("#i8", .75, {x: -10, ease: "typeEase"}, "-=0.5")
+        .to("#i9", .75, {x: -20, ease: "typeEase"}, "-=0.5")
+        .to("#i11", .75, {y: -20, ease: "typeEase"}, "-=0.5")
+        .to("#i10", .75, {y: 30, ease: "typeEase"}, "-=0.5");
+
+      return tl;
+    }
+    
+    // [M]
+    function timelineM() {
+      const tl = new TimelineMax();
+      tl.to("#m1", .50, {x: 0, ease: "typeEase"})
+        .to("#m1", .75, {y: 0, ease: "typeEase"})
+        .to("#m2", .50, {x: 0, ease: "typeEase"})
+        .to("#m3", .75, {y: 0, ease: "typeEase"}, "-=0.5")
+        .to("#m4", .75, {x: 0, ease: "typeEase"}, "-=0.5")
+        .to("#m5", .75, {x: 20, ease: "typeEase"}, "-=0.5")
+        .to("#m6", .75, {x: 10, ease: "typeEase"}, "-=0.5")
+        .to("#m7", .75, {x: 20, ease: "typeEase"}, "-=0.5")
+        .to("#m8", .75, {y: 0, ease: "typeEase"}, "-=0.5")
+        .to("#m8", .75, {x: 0, ease: "typeEase"}, "-=0.5");
+
+      return tl;
+    }
+
+    // [E]
+    function timelineEe() {
+      const tl = new TimelineMax();
+      tl.to("#ee1", .50, {x: 0, ease: "typeEase"})
+        .to("#ee1", .75, {y: 0, ease: "typeEase"})
+        .to("#ee2", .50, {y: 0, ease: "typeEase"})
+        .to("#ee3", .75, {y: 0, ease: "typeEase"}, "-=0.5")
+        .to("#ee4", .75, {x: 0, ease: "typeEase"}, "-=0.5")
+        .to("#ee5", .75, {x: 0, ease: "typeEase"}, "-=0.5")
+        .to("#ee5", .75, {y: 0, ease: "typeEase"}, "-=0.5")
+        .to("#ee6", .75, {y: 20, ease: "typeEase"}, "-=0.5")
+        .to("#ee7", .75, {y: -20, ease: "typeEase"}, "-=0.5");
+        
+      return tl;
+    }
+
+    // Sequence timelines
+    master.add(timelineC1());
+    master.add(timelineY1(), "-=3");
+    master.add(timelineB1(), "-=5");
+    master.add(timelineE1(), "-=6");
+    master.add(timelineR1(), "-=7");
+    master.add(timelineCc1(), "-=4");
+    master.add(timelineRr1(), "-=5");
+    master.add(timelineI(), "-=6");
+    master.add(timelineM(), "-=5");
+    master.add(timelineEe(), "-=5");
 
   }, []);
   
@@ -182,92 +394,92 @@ const CybercrimeTitle = () => {
           <line id="c3" x1="80" y1="243" x2="80" y2="403"/>
         </g>
         <g id="_01-cyber-y" data-name="01-cyber-y" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4">
-          <polyline points="408.34 263.25 390 303 360 303 330 303 270 173 260 173 260 163"/>
-          <polyline points="460 163 460 173 450 173 439.74 195.24"/>
-          <line x1="360" y1="363" x2="360" y2="303"/>
-          <line x1="360" y1="463" x2="360" y2="433"/>
-          <polyline points="474.87 195.24 459.02 229.57 443.48 263.25"/>
-          <polyline points="380 433 380 413 380 363"/>
+          <polyline id="y1" points="408.34 263.25 390 303 360 303 330 303 270 173 260 173 260 163"/>
+          <polyline id="y2" points="460 163 460 173 450 173 439.74 195.24"/>
+          <line id="y3" x1="360" y1="363" x2="360" y2="303"/>
+          <line id="y4" x1="360" y1="463" x2="360" y2="433"/>
+          <polyline id="y5" points="474.87 195.24 459.02 229.57 443.48 263.25"/>
+          <polyline id="y6" points="380 433 380 413 380 363"/>
         </g>
         <g id="_01-cyber-b" data-name="01-cyber-b" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4">
-          <polyline points="600 463 510 463 490 443 490 423"/>
-          <polyline points="700 243 700 293 690 303 700 313 700 453 690 463 640 463"/>
-          <polyline points="650 163 690 163 700 173 700 193"/>
-          <polyline points="490 333 490 313 490 293 490 183 510 163 610 163 650 143"/>
-          <line x1="540" y1="233" x2="650" y2="233"/>
-          <line x1="540" y1="383" x2="650" y2="383"/>
-          <polyline points="470 423 470 383 470 333"/>
-          <polyline points="640 473 620 473 600 473"/>
+          <polyline id="b1" points="600 463 510 463 490 443 490 423"/>
+          <polyline id="b2" points="700 243 700 293 690 303 700 313 700 453 690 463 640 463"/>
+          <polyline id="b3" points="650 163 690 163 700 173 700 193"/>
+          <polyline id="b4" points="490 333 490 313 490 293 490 183 510 163 610 163 650 143"/>
+          <line id="b5" x1="540" y1="233" x2="650" y2="233"/>
+          <line id="b6" x1="540" y1="383" x2="650" y2="383"/>
+          <polyline id="b7" points="470 423 470 383 470 333"/>
+          <polyline id="b8" points="640 473 620 473 600 473"/>
+          <polyline id="b9" points="750 193 750 213 750 243"/>
         </g>
         <g id="_01-cyber-e" data-name="01-cyber-e" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4">
-          <polyline points="880 463 920 463 930 453"/>
-          <polyline points="730 403 730 443 750 463 850 463"/>
-          <polyline points="800 163 750 163 730 183 730 343"/>
-          <polyline points="930 173 920 163 820 163"/>
-          <line x1="880" y1="303" x2="920" y2="303"/>
-          <line x1="730" y1="303" x2="790" y2="303"/>
-          <polyline points="750 193 750 213 750 243"/>
-          <polyline points="790 353 820 353 880 353"/>
-          <polyline points="820 153 810 153 800 153"/>
-          <polyline points="850 473 860 473 880 473"/>
-          <polyline points="770 343 770 373 770 403"/>
+          <polyline id="e1" points="880 463 920 463 930 453"/>
+          <polyline id="e2" points="730 403 730 443 750 463 850 463"/>
+          <polyline id="e3" points="800 163 750 163 730 183 730 343"/>
+          <polyline id="e4" points="930 173 920 163 820 163"/>
+          <line id="e5" x1="880" y1="303" x2="920" y2="303"/>
+          <line id="e6" x1="730" y1="303" x2="790" y2="303"/>
+          <polyline id="e7" points="790 353 820 353 880 353"/>
+          <polyline id="e8" points="820 153 810 153 800 153"/>
+          <polyline id="e9" points="850 473 860 473 880 473"/>
+          <polyline id="e10" points="770 343 770 373 770 403"/>
         </g>
         <g id="_01-cyber-r" data-name="01-cyber-r" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4">
-          <polyline points="960 313 970 303 1150 303 1160 293 1160 263 1200 223"/>
-          <polyline points="1040 163 1150 163 1160 173 1160 203"/>
-          <polyline points="950 343 950 183 970 163 1000 163"/>
-          <line x1="950" y1="463" x2="950" y2="413"/>
-          <polyline points="1110 313 1150 313 1150 453 1160 463"/>
-          <polyline points="970 413 970 383 970 343"/>
-          <polyline points="1000 133 1020 133 1040 133"/>
+          <polyline id="r1" points="960 313 970 303 1150 303 1160 293 1160 263 1200 223"/>
+          <polyline id="r2" points="1040 163 1150 163 1160 173 1160 203"/>
+          <polyline id="r3" points="950 343 950 183 970 163 1000 163"/>
+          <line id="r4" x1="950" y1="463" x2="950" y2="413"/>
+          <polyline id="r5" points="1110 313 1150 313 1150 453 1160 463"/>
+          <polyline id="r6" points="970 413 970 383 970 343"/>
+          <polyline id="r7" points="1000 133 1020 133 1040 133"/>
         </g>
         <g id="_01-crime-c" data-name="01-crime-c" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4">
-          <polyline points="30 803 30 843 50 863 230 863 240 853"/>
-          <polyline points="160 563 50 563 30 583 30 713"/>
-          <polyline points="240 573 230 563 210 563"/>
-          <polyline points="50 713 50 763 50 803"/>
-          <polyline points="210 533 190 533 160 533"/>
+          <polyline id="cc1" points="30 803 30 843 50 863 230 863 240 853"/>
+          <polyline id="cc2" points="160 563 50 563 30 583 30 713"/>
+          <polyline id="cc3" points="240 573 230 563 210 563"/>
+          <polyline id="cc4" points="50 713 50 763 50 803"/>
+          <polyline id="cc5" points="210 533 190 533 160 533"/>
         </g>
         <g id="_01-crime-r" data-name="01-crime-r" stroke="#fff" stroke-miterlimit="10" stroke-width="4">
-          <polyline points="470 663 470 693 460 703 280 703 270 713" fill="none"/>
-          <polyline points="340 563 460 563 470 573 470 593 530 653" fill="none"/>
-          <polyline points="260 863 260 583 280 563 310 563" fill="none"/>
-          <polyline points="460 833 460 853 470 863" fill="none"/>
-          <polyline points="420 713 460 713 460 813" fill="none"/>
-          <polyline points="480 813 480 823 480 833" fill="none"/>
-          <polyline points="310 533 320 533 340 533" fill="#ff8d6d"/>
+          <polyline id="rr1" points="470 663 470 693 460 703 280 703 270 713" fill="none"/>
+          <polyline id="rr2" points="340 563 460 563 470 573 470 593 530 653" fill="none"/>
+          <polyline id="rr3" points="260 863 260 583 280 563 310 563" fill="none"/>
+          <polyline id="rr4" points="460 833 460 853 470 863" fill="none"/>
+          <polyline id="rr5" points="420 713 460 713 460 813" fill="none"/>
+          <polyline id="rr6" points="480 813 480 823 480 833" fill="none"/>
+          <polyline id="rr7" points="310 533 320 533 340 533" fill="#ff8d6d"/>
         </g>
         <g id="_01-crime-i" data-name="01-crime-i" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4">
-          <line x1="680" y1="863" x2="690" y2="863"/>
-          <polyline points="600 813 600 863 620 863"/>
-          <line x1="600" y1="623" x2="600" y2="743"/>
-          <polyline points="570 563 600 563 600 603"/>
-          <line x1="510" y1="563" x2="530" y2="563"/>
-          <line x1="610" y1="563" x2="690" y2="563"/>
-          <line x1="590" y1="863" x2="510" y2="863"/>
-          <polyline points="610 743 610 783 610 813"/>
-          <polyline points="620 603 620 613 620 623"/>
-          <polyline points="530 533 550 533 570 533"/>
-          <polyline points="620 883 650 883 680 883"/>
+          <line id="i1" x1="680" y1="863" x2="690" y2="863"/>
+          <polyline id="i2" points="600 813 600 863 620 863"/>
+          <line id="i3" x1="600" y1="623" x2="600" y2="743"/>
+          <polyline id="i4" points="570 563 600 563 600 603"/>
+          <line id="i5" x1="510" y1="563" x2="530" y2="563"/>
+          <line id="i6" x1="610" y1="563" x2="690" y2="563"/>
+          <line id="i7" x1="590" y1="863" x2="510" y2="863"/>
+          <polyline id="i8" points="610 743 610 783 610 813"/>
+          <polyline id="i9" points="620 603 620 613 620 623"/>
+          <polyline id="i10" points="530 533 550 533 570 533"/>
+          <polyline id="i11" points="620 883 650 883 680 883"/>
         </g>
         <g id="_01-crime-m" data-name="01-crime-m" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4">
-          <line x1="820" y1="673" x2="820" y2="863"/>
-          <polyline points="730 703 730 583 750 563 820 563 820 603"/>
-          <polyline points="720 863 720 853 730 853 730 793"/>
-          <polyline points="920 733 920 583 900 563 830 563"/>
-          <polyline points="930 863 930 853 920 853 920 793"/>
-          <polyline points="710 793 710 743 710 703"/>
-          <polyline points="810 603 810 633 810 673"/>
-          <polyline points="900 793 900 763 900 733"/>
+          <polyline id="m1" points="730 703 730 583 750 563 820 563 820 603"/>
+          <polyline id="m2" points="720 863 720 853 730 853 730 793"/>
+          <polyline id="m3" points="920 733 920 583 900 563 830 563"/>
+          <polyline id="m4" points="930 863 930 853 920 853 920 793"/>
+          <polyline id="m5" points="710 793 710 743 710 703"/>
+          <polyline id="m6" points="810 603 810 633 810 673"/>
+          <polyline id="m7" points="900 793 900 763 900 733"/>
+          <line id="m8" x1="820" y1="673" x2="820" y2="863"/>
         </g>
         <g id="_01-crime-e" data-name="01-crime-e" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4">
-          <polyline points="1030 863 1140 863 1150 853"/>
-          <polyline points="1060 563 970 563 950 583 950 843 970 863 1000 863"/>
-          <polyline points="1150 573 1140 563 1100 563 1060 533"/>
-          <line x1="1070" y1="703" x2="1140" y2="703"/>
-          <line x1="950" y1="703" x2="1020" y2="703"/>
-          <polyline points="1020 683 1050 683 1070 683"/>
-          <polyline points="1000 883 1010 883 1030 883"/>
+          <polyline id="ee1" points="1030 863 1140 863 1150 853"/>
+          <polyline id="ee2" points="1060 563 970 563 950 583 950 843 970 863 1000 863"/>
+          <polyline id="ee3" points="1150 573 1140 563 1100 563 1060 533"/>
+          <line id="ee4" x1="1070" y1="703" x2="1140" y2="703"/>
+          <line id="ee5" x1="950" y1="703" x2="1020" y2="703"/>
+          <polyline id="ee6" points="1020 683 1050 683 1070 683"/>
+          <polyline id="ee7" points="1000 883 1010 883 1030 883"/>
         </g>
         <g id="blueBars" fill="#2ad2c9">
           <rect x="30" y="723" width="60" height="60"/>
