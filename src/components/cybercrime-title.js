@@ -13,7 +13,45 @@ const CybercrimeTitle = () => {
     const blocksOne = svgElements.querySelector("#blocks-01");
     const greenBarOne = svgElements.querySelector("#greenBarOne");
 
+    let randFill = gsap.utils.random([0, 0.5, 1], true);
+    gsap.set(".gridblock", {
+      fillOpacity: function(i, elem, gridblocks) {
+        return randFill();
+      }
+    })
+
+    function timelineBlocksOne() {
+      const tl = new TimelineMax();
+      const t = 3;
+      tl.to(".gridblock", t, {
+        fillOpacity: function(i, elem, gridblocks) {
+          return randFill();
+        }
+      })
+
+      tl.to(".gridblock", t, {
+        fillOpacity: function(i, elem, gridblocks) {
+          return randFill();
+        }
+      })
+
+      tl.to(".gridblock", t, {
+        fillOpacity: function(i, elem, gridblocks) {
+          return randFill();
+        }
+      })
+
+      tl.to(".gridblock", t, {
+        fillOpacity: function(i, elem, gridblocks) {
+          return randFill();
+        }
+      })
+         
+      return tl;
+    }
+
     const master = gsap.timeline();
+    const backgroundTl = gsap.timeline();
     
     CustomEase.create("typeEase", "M0,0 C0.036,0.592 -0.094,1 0.59,1 0.701,1 0.818,1.001 1,1 ");
     
@@ -227,6 +265,8 @@ const CybercrimeTitle = () => {
     }
 
     // Sequence timelines
+
+    // Type Animation
     master.add(timelineC1());
     master.add(timelineY1(), "-=3");
     master.add(timelineB1(), "-=5");
@@ -237,6 +277,9 @@ const CybercrimeTitle = () => {
     master.add(timelineI(), "-=6");
     master.add(timelineM(), "-=5");
     master.add(timelineEe(), "-=5");
+
+    // Background Animation
+    backgroundTl.add(timelineBlocksOne);
 
   }, []);
   
@@ -249,140 +292,140 @@ const CybercrimeTitle = () => {
       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1201.41 950">
         <title id="title" lang="en">Cyber Crime</title>
         <g id="blocks-01" fill="#2ad2c9">
-          <rect x="45" y="284" width="8" height="8"/>
-          <rect x="57" y="284" width="8" height="8"/>
-          <rect x="69" y="284" width="8" height="8"/>
-          <rect x="81" y="284" width="8" height="8"/>
-          <rect x="93" y="284" width="8" height="8"/>
-          <rect x="105" y="284" width="8" height="8"/>
-          <rect x="117" y="284" width="8" height="8"/>
-          <rect x="129" y="284" width="8" height="8"/>
-          <rect x="45" y="296" width="8" height="8"/>
-          <rect x="57" y="296" width="8" height="8"/>
-          <rect x="69" y="296" width="8" height="8"/>
-          <rect x="81" y="296" width="8" height="8"/>
-          <rect x="93" y="296" width="8" height="8"/>
-          <rect x="105" y="296" width="8" height="8"/>
-          <rect x="117" y="296" width="8" height="8"/>
-          <rect x="129" y="296" width="8" height="8"/>
-          <rect x="45" y="308" width="8" height="8"/>
-          <rect x="57" y="308" width="8" height="8"/>
-          <rect x="69" y="308" width="8" height="8"/>
-          <rect x="81" y="308" width="8" height="8"/>
-          <rect x="93" y="308" width="8" height="8"/>
-          <rect x="105" y="308" width="8" height="8"/>
-          <rect x="117" y="308" width="8" height="8"/>
-          <rect x="129" y="308" width="8" height="8"/>
-          <rect x="45" y="320" width="8" height="8"/>
-          <rect x="57" y="320" width="8" height="8"/>
-          <rect x="69" y="320" width="8" height="8"/>
-          <rect x="81" y="320" width="8" height="8"/>
-          <rect x="93" y="320" width="8" height="8"/>
-          <rect x="105" y="320" width="8" height="8"/>
-          <rect x="117" y="320" width="8" height="8"/>
-          <rect x="129" y="320" width="8" height="8"/>
+          <rect className="gridblock" x="45" y="284" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="57" y="284" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="69" y="284" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="81" y="284" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="93" y="284" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="105" y="284" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="117" y="284" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="129" y="284" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="45" y="296" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="57" y="296" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="69" y="296" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="81" y="296" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="93" y="296" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="105" y="296" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="117" y="296" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="129" y="296" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="45" y="308" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="57" y="308" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="69" y="308" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="81" y="308" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="93" y="308" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="105" y="308" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="117" y="308" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="129" y="308" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="45" y="320" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="57" y="320" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="69" y="320" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="81" y="320" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="93" y="320" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="105" y="320" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="117" y="320" width="8" height="8" fillOpacity="1"/>
+          <rect className="gridblock" x="129" y="320" width="8" height="8" fillOpacity="1"/>
         </g>
         <g id="blocks-02" fill="#2ad2c9">
-          <rect x="1087" y="376" width="8" height="8"/>
-          <rect x="1099" y="376" width="8" height="8"/>
-          <rect x="1111" y="376" width="8" height="8"/>
-          <rect x="1123" y="376" width="8" height="8"/>
-          <rect x="1135" y="376" width="8" height="8"/>
-          <rect x="1147" y="376" width="8" height="8"/>
-          <rect x="1159" y="376" width="8" height="8"/>
-          <rect x="1171" y="376" width="8" height="8"/>
-          <rect x="1087" y="388" width="8" height="8"/>
-          <rect x="1099" y="388" width="8" height="8"/>
-          <rect x="1111" y="388" width="8" height="8"/>
-          <rect x="1123" y="388" width="8" height="8"/>
-          <rect x="1135" y="388" width="8" height="8"/>
-          <rect x="1147" y="388" width="8" height="8"/>
-          <rect x="1159" y="388" width="8" height="8"/>
-          <rect x="1171" y="388" width="8" height="8"/>
-          <rect x="1087" y="400" width="8" height="8"/>
-          <rect x="1099" y="400" width="8" height="8"/>
-          <rect x="1111" y="400" width="8" height="8"/>
-          <rect x="1123" y="400" width="8" height="8"/>
-          <rect x="1135" y="400" width="8" height="8"/>
-          <rect x="1147" y="400" width="8" height="8"/>
-          <rect x="1159" y="400" width="8" height="8"/>
-          <rect x="1171" y="400" width="8" height="8"/>
-          <rect x="1087" y="412" width="8" height="8"/>
-          <rect x="1099" y="412" width="8" height="8"/>
-          <rect x="1111" y="412" width="8" height="8"/>
-          <rect x="1123" y="412" width="8" height="8"/>
-          <rect x="1135" y="412" width="8" height="8"/>
-          <rect x="1147" y="412" width="8" height="8"/>
-          <rect x="1159" y="412" width="8" height="8"/>
-          <rect x="1171" y="412" width="8" height="8"/>
+          <rect className="gridblock" x="1087" y="376" width="8" height="8"/>
+          <rect className="gridblock" x="1099" y="376" width="8" height="8"/>
+          <rect className="gridblock" x="1111" y="376" width="8" height="8"/>
+          <rect className="gridblock" x="1123" y="376" width="8" height="8"/>
+          <rect className="gridblock" x="1135" y="376" width="8" height="8"/>
+          <rect className="gridblock" x="1147" y="376" width="8" height="8"/>
+          <rect className="gridblock" x="1159" y="376" width="8" height="8"/>
+          <rect className="gridblock" x="1171" y="376" width="8" height="8"/>
+          <rect className="gridblock" x="1087" y="388" width="8" height="8"/>
+          <rect className="gridblock" x="1099" y="388" width="8" height="8"/>
+          <rect className="gridblock" x="1111" y="388" width="8" height="8"/>
+          <rect className="gridblock" x="1123" y="388" width="8" height="8"/>
+          <rect className="gridblock" x="1135" y="388" width="8" height="8"/>
+          <rect className="gridblock" x="1147" y="388" width="8" height="8"/>
+          <rect className="gridblock" x="1159" y="388" width="8" height="8"/>
+          <rect className="gridblock" x="1171" y="388" width="8" height="8"/>
+          <rect className="gridblock" x="1087" y="400" width="8" height="8"/>
+          <rect className="gridblock" x="1099" y="400" width="8" height="8"/>
+          <rect className="gridblock" x="1111" y="400" width="8" height="8"/>
+          <rect className="gridblock" x="1123" y="400" width="8" height="8"/>
+          <rect className="gridblock" x="1135" y="400" width="8" height="8"/>
+          <rect className="gridblock" x="1147" y="400" width="8" height="8"/>
+          <rect className="gridblock" x="1159" y="400" width="8" height="8"/>
+          <rect className="gridblock" x="1171" y="400" width="8" height="8"/>
+          <rect className="gridblock" x="1087" y="412" width="8" height="8"/>
+          <rect className="gridblock" x="1099" y="412" width="8" height="8"/>
+          <rect className="gridblock" x="1111" y="412" width="8" height="8"/>
+          <rect className="gridblock" x="1123" y="412" width="8" height="8"/>
+          <rect className="gridblock" x="1135" y="412" width="8" height="8"/>
+          <rect className="gridblock" x="1147" y="412" width="8" height="8"/>
+          <rect className="gridblock" x="1159" y="412" width="8" height="8"/>
+          <rect className="gridblock" x="1171" y="412" width="8" height="8"/>
         </g>
         <g id="blocks-03" fill="#2ad2c9">
-          <rect x="862" y="609" width="8" height="8"/>
-          <rect x="874" y="609" width="8" height="8"/>
-          <rect x="886" y="609" width="8" height="8"/>
-          <rect x="898" y="609" width="8" height="8"/>
-          <rect x="910" y="609" width="8" height="8"/>
-          <rect x="862" y="621" width="8" height="8"/>
-          <rect x="874" y="621" width="8" height="8"/>
-          <rect x="886" y="621" width="8" height="8"/>
-          <rect x="898" y="621" width="8" height="8"/>
-          <rect x="910" y="621" width="8" height="8"/>
+          <rect className="gridblock" x="862" y="609" width="8" height="8"/>
+          <rect className="gridblock" x="874" y="609" width="8" height="8"/>
+          <rect className="gridblock" x="886" y="609" width="8" height="8"/>
+          <rect className="gridblock" x="898" y="609" width="8" height="8"/>
+          <rect className="gridblock" x="910" y="609" width="8" height="8"/>
+          <rect className="gridblock" x="862" y="621" width="8" height="8"/>
+          <rect className="gridblock" x="874" y="621" width="8" height="8"/>
+          <rect className="gridblock" x="886" y="621" width="8" height="8"/>
+          <rect className="gridblock" x="898" y="621" width="8" height="8"/>
+          <rect className="gridblock" x="910" y="621" width="8" height="8"/>
         </g>
         <g id="blocks-04" fill="#2ad2c9">
-          <rect x="1073" y="897" width="8" height="8"/>
-          <rect x="1085" y="897" width="8" height="8"/>
-          <rect x="1097" y="897" width="8" height="8"/>
-          <rect x="1073" y="909" width="8" height="8"/>
-          <rect x="1085" y="909" width="8" height="8"/>
-          <rect x="1097" y="909" width="8" height="8"/>
-          <rect x="1073" y="921" width="8" height="8"/>
-          <rect x="1085" y="921" width="8" height="8"/>
-          <rect x="1097" y="921" width="8" height="8"/>
+          <rect className="gridblock" x="1073" y="897" width="8" height="8"/>
+          <rect className="gridblock" x="1085" y="897" width="8" height="8"/>
+          <rect className="gridblock" x="1097" y="897" width="8" height="8"/>
+          <rect className="gridblock" x="1073" y="909" width="8" height="8"/>
+          <rect className="gridblock" x="1085" y="909" width="8" height="8"/>
+          <rect className="gridblock" x="1097" y="909" width="8" height="8"/>
+          <rect className="gridblock" x="1073" y="921" width="8" height="8"/>
+          <rect className="gridblock" x="1085" y="921" width="8" height="8"/>
+          <rect className="gridblock" x="1097" y="921" width="8" height="8"/>
         </g>
         <g id="blocks-05" fill="#2ad2c9">
-          <rect x="333" y="373" width="8" height="8"/>
-          <rect x="345" y="373" width="8" height="8"/>
-          <rect x="357" y="373" width="8" height="8"/>
-          <rect x="333" y="385" width="8" height="8"/>
-          <rect x="345" y="385" width="8" height="8"/>
-          <rect x="357" y="385" width="8" height="8"/>
-          <rect x="333" y="397" width="8" height="8"/>
-          <rect x="345" y="397" width="8" height="8"/>
-          <rect x="357" y="397" width="8" height="8"/>
+          <rect className="gridblock" x="333" y="373" width="8" height="8"/>
+          <rect className="gridblock" x="345" y="373" width="8" height="8"/>
+          <rect className="gridblock" x="357" y="373" width="8" height="8"/>
+          <rect className="gridblock" x="333" y="385" width="8" height="8"/>
+          <rect className="gridblock" x="345" y="385" width="8" height="8"/>
+          <rect className="gridblock" x="357" y="385" width="8" height="8"/>
+          <rect className="gridblock" x="333" y="397" width="8" height="8"/>
+          <rect className="gridblock" x="345" y="397" width="8" height="8"/>
+          <rect className="gridblock" x="357" y="397" width="8" height="8"/>
         </g>
         <g id="blocks-06" fill="#2ad2c9">
-          <rect x="189" y="765" width="8" height="8"/>
-          <rect x="201" y="765" width="8" height="8"/>
-          <rect x="213" y="765" width="8" height="8"/>
-          <rect x="225" y="765" width="8" height="8"/>
-          <rect x="237" y="765" width="8" height="8"/>
-          <rect x="249" y="765" width="8" height="8"/>
-          <rect x="261" y="765" width="8" height="8"/>
-          <rect x="273" y="765" width="8" height="8"/>
-          <rect x="189" y="777" width="8" height="8"/>
-          <rect x="201" y="777" width="8" height="8"/>
-          <rect x="213" y="777" width="8" height="8"/>
-          <rect x="225" y="777" width="8" height="8"/>
-          <rect x="237" y="777" width="8" height="8"/>
-          <rect x="249" y="777" width="8" height="8"/>
-          <rect x="261" y="777" width="8" height="8"/>
-          <rect x="273" y="777" width="8" height="8"/>
-          <rect x="189" y="789" width="8" height="8"/>
-          <rect x="201" y="789" width="8" height="8"/>
-          <rect x="213" y="789" width="8" height="8"/>
-          <rect x="225" y="789" width="8" height="8"/>
-          <rect x="237" y="789" width="8" height="8"/>
-          <rect x="249" y="789" width="8" height="8"/>
-          <rect x="261" y="789" width="8" height="8"/>
-          <rect x="273" y="789" width="8" height="8"/>
-          <rect x="189" y="801" width="8" height="8"/>
-          <rect x="201" y="801" width="8" height="8"/>
-          <rect x="213" y="801" width="8" height="8"/>
-          <rect x="225" y="801" width="8" height="8"/>
-          <rect x="237" y="801" width="8" height="8"/>
-          <rect x="249" y="801" width="8" height="8"/>
-          <rect x="261" y="801" width="8" height="8"/>
-          <rect x="273" y="801" width="8" height="8"/>
+          <rect className="gridblock" x="189" y="765" width="8" height="8"/>
+          <rect className="gridblock" x="201" y="765" width="8" height="8"/>
+          <rect className="gridblock" x="213" y="765" width="8" height="8"/>
+          <rect className="gridblock" x="225" y="765" width="8" height="8"/>
+          <rect className="gridblock" x="237" y="765" width="8" height="8"/>
+          <rect className="gridblock" x="249" y="765" width="8" height="8"/>
+          <rect className="gridblock" x="261" y="765" width="8" height="8"/>
+          <rect className="gridblock" x="273" y="765" width="8" height="8"/>
+          <rect className="gridblock" x="189" y="777" width="8" height="8"/>
+          <rect className="gridblock" x="201" y="777" width="8" height="8"/>
+          <rect className="gridblock" x="213" y="777" width="8" height="8"/>
+          <rect className="gridblock" x="225" y="777" width="8" height="8"/>
+          <rect className="gridblock" x="237" y="777" width="8" height="8"/>
+          <rect className="gridblock" x="249" y="777" width="8" height="8"/>
+          <rect className="gridblock" x="261" y="777" width="8" height="8"/>
+          <rect className="gridblock" x="273" y="777" width="8" height="8"/>
+          <rect className="gridblock" x="189" y="789" width="8" height="8"/>
+          <rect className="gridblock" x="201" y="789" width="8" height="8"/>
+          <rect className="gridblock" x="213" y="789" width="8" height="8"/>
+          <rect className="gridblock" x="225" y="789" width="8" height="8"/>
+          <rect className="gridblock" x="237" y="789" width="8" height="8"/>
+          <rect className="gridblock" x="249" y="789" width="8" height="8"/>
+          <rect className="gridblock" x="261" y="789" width="8" height="8"/>
+          <rect className="gridblock" x="273" y="789" width="8" height="8"/>
+          <rect className="gridblock" x="189" y="801" width="8" height="8"/>
+          <rect className="gridblock" x="201" y="801" width="8" height="8"/>
+          <rect className="gridblock" x="213" y="801" width="8" height="8"/>
+          <rect className="gridblock" x="225" y="801" width="8" height="8"/>
+          <rect className="gridblock" x="237" y="801" width="8" height="8"/>
+          <rect className="gridblock" x="249" y="801" width="8" height="8"/>
+          <rect className="gridblock" x="261" y="801" width="8" height="8"/>
+          <rect className="gridblock" x="273" y="801" width="8" height="8"/>
         </g>
         <g id="greenBars" fill="#01a982">
           <rect id="greenBarOne" y="243" width="230" height="160"/>
