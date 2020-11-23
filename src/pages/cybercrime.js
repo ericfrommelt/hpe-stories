@@ -16,6 +16,7 @@ const CyberCrime = (props) => (
       >
         <header>
           <div className={ style.masthead }>
+            <div className={style.logo}><Logo /></div>
             <div className={ style.headerType }>
               <CybercrimeTitle />
             </div>

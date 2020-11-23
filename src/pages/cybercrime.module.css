@@ -26,19 +26,7 @@ body {
 
 .logo {
   max-width: 7.5em;
-  margin-bottom: 2rem;
-}
-
-@media screen and (min-width: 768px) {
-  .logo {
-    max-width: 15em;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .logo {
-    margin-bottom: 8em;
-  }
+  margin-top: 2em;
 }
 
 .headerType {

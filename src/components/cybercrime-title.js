@@ -12,17 +12,96 @@ const CybercrimeTitle = () => {
     const [svgElements] = svgWrapper.current.children;
     const blocksOne = svgElements.querySelector("#blocks-01");
     const greenBarOne = svgElements.querySelector("#greenBarOne");
+    const greenBarTwo = svgElements.querySelector("#greenBarTwo");
+    const bluelinesOne = svgElements.querySelector("#bluelines-1");
+    const bluelinesTwo = svgElements.querySelector("#bluelines-2");
+    const bluelinesThree = svgElements.querySelector("#bluelines-3");
+    const blueBarOne = svgElements.querySelector("#bluebarOne");
+    const blueBarTwo = svgElements.querySelector("#bluebarTwo");
+    const blueBarThree = svgElements.querySelector("#bluebarThree");
+    const circleOne = svgElements.querySelector("#circleOne");
+    const circleTwo = svgElements.querySelector("#circleTwo");
+    const circleThree = svgElements.querySelector("#circleThree");
+    const master = gsap.timeline();
+    const backgroundTl = gsap.timeline();
+    const glitchDuration = 0.2;
+    
+    CustomEase.create("typeEase", "M0,0 C0.036,0.592 -0.094,1 0.59,1 0.701,1 0.818,1.001 1,1 ");
+
+    // INITIAL MOVEMENT ::::::::::::::::::::::::::::::::::::::::::
+
+    gsap.to(blocksOne, {x: 200, duration: 1, ease: "typeEase"});
+    gsap.to(greenBarOne, {x: 400, duration: 1, ease: "typeEase"});
+    gsap.from(bluelinesTwo, {x: 800, duration: 1, ease: "typeEase"});
+    gsap.from(bluelinesOne, {y: -200, duration: 1, ease: "typeEase"});
+    gsap.from(bluelinesThree, {y: 500, duration: 1.2, ease: "typeEase"});
+    gsap.fromTo(blueBarOne, {x: 100, y: 300}, {keyframes: [
+      {x: 10, width: 70, height: 10, duration: glitchDuration}, 
+      {x: 500, width: 700, height: 500, duration: glitchDuration}, 
+      {x: 233, width: 390, height: 90, duration: glitchDuration, delay: 0.1},
+      {x: 300, width: 100, height: 100, duration: glitchDuration},
+      {x: 300, width: 1040, height: 35, duration: glitchDuration},
+      {x: 300, width: 1040, height: 0, duration: glitchDuration, opacity: 0, delay: 0.5}
+    ]});
+    gsap.fromTo(greenBarOne, {x: 400}, {keyframes: [
+      {y: 800, height: 800, duration: glitchDuration},
+      {y: 300, height: 200, duration: glitchDuration},
+      {y: -20, height: 20, duration: glitchDuration}
+    ]});
+    gsap.fromTo(blueBarTwo, {x: 1000, y: 500}, {keyframes: [
+      {x: -1000, width: 800, duration: glitchDuration, ease: "typeEase"},
+      {x: -60, width: 600, duration: glitchDuration, ease: "typeEase"},
+      {x: -2000, width: 6000, height: 10, duration: glitchDuration, ease: "typeEase"},
+      {x: -2000, width: 6000, height: 10, duration: glitchDuration, ease: "typeEase", opacity: 0},
+    ]});
+    gsap.fromTo(blueBarThree, {x: 0}, {keyframes: [
+      {x: -1000, width: 800, duration: glitchDuration },
+      {x: -60, width: 600, duration: glitchDuration, ease: "typeEase"},
+      {x: -2000, width: 6000, height: 10, duration: glitchDuration},
+      {x: -2000, width: 6000, height: 10, duration: glitchDuration, ease: "typeEase", opacity: 0},
+    ]});
+    gsap.fromTo(greenBarOne, {x: 0}, {keyframes: [
+      {x: -1000, width: 800, duration: glitchDuration },
+      {x: -60, width: 600, duration: glitchDuration, ease: "typeEase"},
+      {x: -2000, width: 6000, height: 10, duration: glitchDuration},
+      {x: -2000, width: 6000, height: 10, duration: glitchDuration, ease: "typeEase", opacity: 0},
+    ]});
+    gsap.fromTo(greenBarTwo, {y: 0}, {keyframes: [
+      {y: -1000, width: 800, duration: glitchDuration },
+      {y: -60, width: 600, duration: glitchDuration, ease: "typeEase"},
+      {y: -2000, width: 6000, height: 10, duration: glitchDuration},
+      {y: -2000, width: 6000, height: 10, duration: glitchDuration, ease: "typeEase", opacity: 0},
+    ]});
+
+    gsap.fromTo(circleOne, {cx: 245, cy: 108, opacity: 0}, {keyframes: [
+      {cx: 330, cy: 120, duration: 1, ease: "typeEase"},
+      {opacity: 0, duration: glitchDuration, ease: "typeEase"},
+      {opacity: 1, duration: glitchDuration, ease: "typeEase"},
+      {opacity: 0, duration: glitchDuration, ease: "typeEase"},
+      {opacity: 1, duration: glitchDuration, ease: "typeEase"},
+    ]});
+
+    gsap.fromTo(circleTwo, {cx: 85, cy: 648}, {keyframes: [
+      {cx: 106, cy: 222, duration: 2, ease: "typeEase"},
+      {cx: 20, cy: 444, duration: 2, ease: "typeEase"},
+      {cx: 85, cy: 648, duration: 2, ease: "typeEase"},
+    ]});
+
+    gsap.fromTo(circleThree, {cx: 1175, cy: 788, opacity: 0}, {keyframes: [
+      {cx: 1100, cy: 788, duration: 1, ease: "typeEase"},
+      {opacity: 0, duration: glitchDuration, ease: "typeEase"},
+      {opacity: 1, duration: glitchDuration, ease: "typeEase"},
+      {opacity: 0, duration: glitchDuration, ease: "typeEase"},
+      {opacity: 1, duration: glitchDuration, ease: "typeEase"},
+    ]});
+
+    // BACKGROUND ANIMATION [SHAPES] SETUP ::::::::::::::::::::::::::::::::::::::::::
 
     let randFill = gsap.utils.random([0, 0.5, 1], true);
-    gsap.set(".gridblock", {
-      fillOpacity: function(i, elem, gridblocks) {
-        return randFill();
-      }
-    })
 
     function timelineBlocksOne() {
       const tl = new TimelineMax();
-      const t = 3;
+      const t = 4;
       tl.to(".gridblock", t, {
         fillOpacity: function(i, elem, gridblocks) {
           return randFill();
@@ -50,10 +129,39 @@ const CybercrimeTitle = () => {
       return tl;
     }
 
-    const master = gsap.timeline();
-    const backgroundTl = gsap.timeline();
+    function timelineBlocksTwo() {
+      const tl = new TimelineMax();
+      const t = 1;
+      tl.to(".lineblock", t, {
+        fillOpacity: function(i, elem, lineblocks) {
+          return randFill();
+        }
+      })
+
+      tl.to(".lineblock", t, {
+        fillOpacity: function(i, elem, lineblocks) {
+          return randFill();
+        }
+      })
+      
+      tl.to(".lineblock", t, {
+        fillOpacity: function(i, elem, lineblocks) {
+          return randFill();
+        }
+      })
+      
+      tl.to(".lineblock", t, {
+        fillOpacity: function(i, elem, lineblocks) {
+          return randFill();
+        }
+      })
+      
+      return tl;
+    }
     
-    CustomEase.create("typeEase", "M0,0 C0.036,0.592 -0.094,1 0.59,1 0.701,1 0.818,1.001 1,1 ");
+    
+    // TYPE ANIMATION SETUP ::::::::::::::::::::::::::::::::::::::::::
+    
     
     // Set initial position of elements
     gsap.set("#c1", {x: 100, y: 60});
@@ -100,9 +208,7 @@ const CybercrimeTitle = () => {
     gsap.set("#ee2", {x: 0, y: 60});
     gsap.set("#ee3", {x: 0, y: -20});
     gsap.set("#ee5", {x: 40, y: 20});
-
-    gsap.to(blocksOne, 1, {x: 200});
-    gsap.to(greenBarOne, 1, {x: 400, ease: "typeEase"});
+    
     
     // Timelines
     // [C]
@@ -176,7 +282,7 @@ const CybercrimeTitle = () => {
         .to("#r3", .75, {y: 0, ease: "typeEase"}, "-=0.5")
         .to("#r5", .50, {x: 0, ease: "typeEase"}, "-=0.5")
         .to("#r5", .75, {y: 0, ease: "typeEase"})
-        .to("#r7", .75, {y: 20, ease: "typeEase"})
+        .to("#r7", .75, {y: 30, ease: "typeEase"})
         .to("#r6", .75, {x: -20, ease: "typeEase"});
 
       return tl;
@@ -264,7 +370,7 @@ const CybercrimeTitle = () => {
       return tl;
     }
 
-    // Sequence timelines
+    // Sequence timelines ::::::::::::::::::::::::::::::::::::::::::
 
     // Type Animation
     master.add(timelineC1());
@@ -279,6 +385,7 @@ const CybercrimeTitle = () => {
     master.add(timelineEe(), "-=5");
 
     // Background Animation
+    backgroundTl.add(timelineBlocksTwo);
     backgroundTl.add(timelineBlocksOne);
 
   }, []);
@@ -429,7 +536,7 @@ const CybercrimeTitle = () => {
         </g>
         <g id="greenBars" fill="#01a982">
           <rect id="greenBarOne" y="243" width="230" height="160"/>
-          <rect x="1020" y="693" width="50" height="140"/>
+          <rect id="greenBarTwo" x="1020" y="693" width="50" height="140"/>
         </g>
         <g id="_01-cyber-c" data-name="01-cyber-c" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4">
           <polyline id="c1" points="30 403 30 443 50 463 230 463 240 453"/>
@@ -525,75 +632,53 @@ const CybercrimeTitle = () => {
           <polyline id="ee7" points="1000 883 1010 883 1030 883"/>
         </g>
         <g id="blueBars" fill="#2ad2c9">
-          <rect x="30" y="723" width="60" height="60"/>
-          <rect x="310" y="703" width="390" height="90"/>
-          <rect x="1000" y="133" width="40" height="130"/>
+          <rect id="bluebarThree" x="30" y="723" width="60" height="60"/>
+          <rect id="bluebarOne" x="310" y="703" width="390" height="90"/>
+          <rect id="bluebarTwo" x="1000" y="133" width="40" height="130"/>
         </g>
         <g id="circles" fill="#ff8d6d">
-          <circle cx="85" cy="648" r="5"/>
-          <circle cx="245" cy="108" r="15"/>
-          <circle cx="1175" cy="788" r="5"/>
+          <circle id="circleOne" cx="245" cy="108" r="15"/>
+          <circle id="circleTwo" cx="85" cy="648" r="5"/>
+          <circle id="circleThree" cx="1175" cy="788" r="5"/>
         </g>
-        <g id="bluelines" fill="#2ad2c9">
-          <rect x="570" y="263" width="4" height="4"/>
-          <rect x="591" y="263" width="4" height="4"/>
-          <rect x="612" y="263" width="4" height="4"/>
-          <rect x="633" y="263" width="4" height="4"/>
-          <rect x="654" y="263" width="4" height="4"/>
-          <rect x="675" y="263" width="4" height="4"/>
-          <rect x="696" y="263" width="4" height="4"/>
-          <rect x="717" y="263" width="4" height="4"/>
-          <rect x="738" y="263" width="4" height="4"/>
-          <g>
-            <rect x="955" y="490" width="4" height="4"/>
-            <rect x="976" y="490" width="4" height="4"/>
-            <rect x="997" y="490" width="4" height="4"/>
-            <rect x="1018" y="490" width="4" height="4"/>
-            <rect x="1039" y="490" width="4" height="4"/>
-            <rect x="1060" y="490" width="4" height="4"/>
-            <rect x="1081" y="490" width="4" height="4"/>
-            <rect x="1102" y="490" width="4" height="4"/>
-            <rect x="1123" y="490" width="4" height="4"/>
-          </g>
-          <g>
-            <rect x="137" y="637" width="4" height="4"/>
-            <rect x="158" y="637" width="4" height="4"/>
-            <rect x="179" y="637" width="4" height="4"/>
-            <rect x="200" y="637" width="4" height="4"/>
-            <rect x="221" y="637" width="4" height="4"/>
-            <rect x="242" y="637" width="4" height="4"/>
-            <rect x="263" y="637" width="4" height="4"/>
-            <rect x="284" y="637" width="4" height="4"/>
-            <rect x="305" y="637" width="4" height="4"/>
-          </g>
+        <g id="bluelines-1" fill="#2ad2c9">
+          <rect className="lineblock" x="570" y="263" width="4" height="4"/>
+          <rect className="lineblock" x="591" y="263" width="4" height="4"/>
+          <rect className="lineblock" x="612" y="263" width="4" height="4"/>
+          <rect className="lineblock" x="633" y="263" width="4" height="4"/>
+          <rect className="lineblock" x="654" y="263" width="4" height="4"/>
+          <rect className="lineblock" x="675" y="263" width="4" height="4"/>
+          <rect className="lineblock" x="696" y="263" width="4" height="4"/>
+          <rect className="lineblock" x="717" y="263" width="4" height="4"/>
+          <rect className="lineblock" x="738" y="263" width="4" height="4"/>
+        </g>
+        <g id="bluelines-2" fill="#2ad2c9">
+          <rect className="lineblock" x="955" y="490" width="4" height="4"/>
+          <rect className="lineblock" x="976" y="490" width="4" height="4"/>
+          <rect className="lineblock" x="997" y="490" width="4" height="4"/>
+          <rect className="lineblock" x="1018" y="490" width="4" height="4"/>
+          <rect className="lineblock" x="1039" y="490" width="4" height="4"/>
+          <rect className="lineblock" x="1060" y="490" width="4" height="4"/>
+          <rect className="lineblock" x="1081" y="490" width="4" height="4"/>
+          <rect className="lineblock" x="1102" y="490" width="4" height="4"/>
+          <rect className="lineblock" x="1123" y="490" width="4" height="4"/>
+        </g>
+        <g id="bluelines-3" fill="#2ad2c9">
+          <rect className="lineblock" x="137" y="637" width="4" height="4"/>
+          <rect className="lineblock" x="158" y="637" width="4" height="4"/>
+          <rect className="lineblock" x="179" y="637" width="4" height="4"/>
+          <rect className="lineblock" x="200" y="637" width="4" height="4"/>
+          <rect className="lineblock" x="221" y="637" width="4" height="4"/>
+          <rect className="lineblock" x="242" y="637" width="4" height="4"/>
+          <rect className="lineblock" x="263" y="637" width="4" height="4"/>
+          <rect className="lineblock" x="284" y="637" width="4" height="4"/>
+          <rect className="lineblock" x="305" y="637" width="4" height="4"/>
         </g>
         <g id="triangles" fill="#2ad2c9">
           <polygon points="1165 543 1160 553 1170 553 1165 543"/>
           <polygon points="1165 54 1160 64 1170 64 1165 54"/>
           <polygon points="1165 694 1160 704 1170 704 1165 694"/>
         </g>
-        {/* <g id="FF-CYBERCRIME" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4">
-          <polyline points="240 173 230 163 50 163 30 183 30 443 50 463 230 463 240 453"/>
-          <polyline points="240 573 230 563 50 563 30 583 30 843 50 863 230 863 240 853"/>
-          <polyline points="460 163 460 173 450 173 390 303 360 303 330 303 270 173 260 173 260 163"/>
-          <line x1="360" y1="463" x2="360" y2="303"/>
-          <polygon points="490 293 490 183 510 163 690 163 700 173 700 293 690 303 700 313 700 453 690 463 510 463 490 443 490 313 490 293"/>
-          <line x1="540" y1="233" x2="650" y2="233"/>
-          <line x1="540" y1="383" x2="650" y2="383"/>
-          <polyline points="930 173 920 163 750 163 730 183 730 443 750 463 920 463 930 453"/>
-          <line x1="730" y1="303" x2="920" y2="303"/>
-          <polyline points="1150 573 1140 563 970 563 950 583 950 843 970 863 1140 863 1150 853"/>
-          <line x1="950" y1="703" x2="1140" y2="703"/>
-          <polyline points="950 463 950 183 970 163 1150 163 1160 173 1160 293 1150 303 970 303 960 313"/>
-          <polyline points="1110 313 1150 313 1150 453 1160 463"/>
-          <polyline points="260 863 260 583 280 563 460 563 470 573 470 693 460 703 280 703 270 713"/>
-          <polyline points="420 713 460 713 460 853 470 863"/>
-          <polyline points="510 563 600 563 600 863 690 863"/>
-          <line x1="610" y1="563" x2="690" y2="563"/>
-          <line x1="590" y1="863" x2="510" y2="863"/>
-          <polyline points="720 863 720 853 730 853 730 583 750 563 820 563 820 863"/>
-          <polyline points="930 863 930 853 920 853 920 583 900 563 830 563"/>
-        </g> */}
       </svg>
     </div>
   )
