@@ -24,11 +24,13 @@ const CyberCrime = (props) => (
             <p className={ style.introcopy }>Cyber crime is pervasive. Here are the most frequent types of attacks on business and how long it takes to bounce back, based on our survey of 237 organizations in six countries.</p>
           </div>
         </header>
-        <div className={ style.graphContainer }>
-          <ParentSize>{({ width, height }) => <BarGraph width={width} height={height} />}</ParentSize>
-        </div>
-        <div className={ style.graphContainerBottom }>
-          <ParentSize>{({ width, height }) => <GraphBottom width={width} height={height} />}</ParentSize>
+        <div className="graphWrapper">
+          <div className={ style.graphContainer }>
+            <ParentSize>{({ width, height }) => <BarGraph width={width} height={height} />}</ParentSize>
+          </div>
+          <div className={ style.graphContainerBottom }>
+            <ParentSize>{({ width, height }) => <GraphBottom width={width} height={height} />}</ParentSize>
+          </div>
         </div>
         <footer className={ style.cybercrimeFooter }>
           <div className={style.footerBar}></div>
