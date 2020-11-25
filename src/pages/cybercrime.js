@@ -8,6 +8,7 @@ import ParentSize from "@visx/responsive/lib/components/ParentSize"
 import BarGraph from "../components/graph"
 import GraphBottom from "../components/graph-bottom"
 import CybercrimeTitle from "../components/cybercrime-title"
+import CtaButton from "../components/cta-button"
 
 const CyberCrime = (props) => (
   <Layout>
@@ -34,13 +35,7 @@ const CyberCrime = (props) => (
         </div>
         <footer className={ style.cybercrimeFooter }>
           <div className={style.footerBar}></div>
-          <div className={style.btnWrapper}>
-            <div className={ style.btnArrow }>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.24 82.83">
-                <title>transformationCTA_Arrow</title>
-                <g id="Layer_2" data-name="Layer 2"><g id="Content"><polyline className={ style.cls1 } points="1.41 1.41 41.41 41.41 1.41 81.41"/></g></g></svg>
-            </div>
-          </div>
+            <CtaButton></CtaButton>
           <div className={style.ctaWrapper}>
             <p className={style.ctacopy}>Get the details on how to raise your security profile and drive innovation. Download the full report from Ponemon Institute:</p>
             <a href="">Cost of Cyber Crime Study &amp; the Risk of Business Innovation</a>
