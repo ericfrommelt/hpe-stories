@@ -11,7 +11,7 @@ import CybercrimeTitle from "../components/cybercrime-title"
 import CtaButton from "../components/cta-button"
 
 const CyberCrime = (props) => (
-  <Layout>
+  <Layout backgroundColor="#000">
     <BackgroundImage
       fluid={ props.data.hackerImage.childImageSharp.fluid }
       >

@@ -1,24 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import "./layout.css"
 import "../css/fonts.css"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const Layout = ({ children, backgroundColor }) => {
 
   return (
     <>
       <div
         style={{
+          backgroundColor: backgroundColor,
           margin: `0 auto`,
           maxWidth: 1800,
         }}
