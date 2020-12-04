@@ -1,9 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-import "./layout.css"
+import "./layout-genomic.css"
 import "../css/fonts.css"
 
-const Layout = ({ children }) => {
+const LayoutGenomic = ({ children }) => {
 
   return (
     <>
@@ -19,8 +19,8 @@ const Layout = ({ children }) => {
   )
 }
 
-Layout.propTypes = {
+LayoutGenomic.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default LayoutGenomic

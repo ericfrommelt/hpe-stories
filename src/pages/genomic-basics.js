@@ -1,11 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
+import LayoutGenomic from '../components/layout-genomic';
+import style from './genomic-basics.module.css';
+import GenomicTitle from '../components/genomic-title';
 
 const GenomicBasics = (props) => (
-  <Layout backgroundColor="#425563">
-    <section>
-      <h1>Genomic Basics for CIOs</h1>
+  <LayoutGenomic>
+    <section id={style.sectionOne}>
+      <GenomicTitle />
       <p>As human genetic sequencing becomes more common, organizations are strategizing how their IT infrastructures can help them seize new opportunities. Here are a few things to know about the human genome:</p>
       <p>Genetic code is expressed in long sequences of four different DNA molecules called “bases.”</p>
       <figure>
@@ -38,7 +40,7 @@ const GenomicBasics = (props) => (
         <a href="">Prepare your healthcare organization for the first wave of genomics</a>
       </div>
     </footer>
-  </Layout>
+  </LayoutGenomic>
 )
 
 export default GenomicBasics
