@@ -22,8 +22,8 @@
 
 .btnWrapper {
   display: flex;
-  width: 8em;
-  height: 8em;
+  max-width: 8em;
+  max-height: 8em;
   border: 0em solid #fff;
   background-color: #01a982;
   overflow: hidden;
