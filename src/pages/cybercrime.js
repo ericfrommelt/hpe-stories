@@ -9,6 +9,7 @@ import BarGraph from "../components/graph"
 import GraphBottom from "../components/graph-bottom"
 import CybercrimeTitle from "../components/cybercrime-title"
 import CtaButton from "../components/cta-button"
+import PrimaryNav from "../components/primary-nav"
 
 const CyberCrime = (props) => (
   <Layout backgroundColor="#000">
@@ -16,8 +17,8 @@ const CyberCrime = (props) => (
       fluid={ props.data.hackerImage.childImageSharp.fluid }
       >
         <header>
+          <PrimaryNav></PrimaryNav>
           <div className={ style.masthead }>
-            <div className={style.logo}><Logo /></div>
             <div className={ style.headerType }>
               <CybercrimeTitle />
             </div>

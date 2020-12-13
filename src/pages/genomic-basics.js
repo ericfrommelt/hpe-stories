@@ -2,18 +2,18 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Layout from '../components/layout';
+import PrimaryNav from '../components/primary-nav';
 import style from './genomic-basics.module.css';
 import GenomicTitle from '../components/genomic-title';
-import Logo from '../svg/logo.inline.svg';
 import Atgc from '../components/atgc';
 import CtaButton from '../components/cta-button';
 
 const GenomicBasics = (props) => (
   <Layout>
+    <div className={style.genomicBody}>
+      <PrimaryNav></PrimaryNav>
+    </div>
     <div className={`${style.gridWrapper} ${style.genomicBody}`}>
-      <div className={style.logo}>
-        <Logo />
-      </div>
       <div className={style.title}>
         <GenomicTitle />
       </div>

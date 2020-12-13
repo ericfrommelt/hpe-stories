@@ -1,0 +1,61 @@
+.gridWrapper {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.logo {
+  grid-column: 2 / span 2;
+  grid-row: 1;
+  max-width: 7.5em;
+  margin-top: 2em;
+}
+
+.storyNav {
+  grid-column: 5 / span 7;
+  grid-row: 1;
+}
+
+.navList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.navList a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  list-style: none;
+  padding: 0 0.5em;
+  border-left: 4px solid #fff;
+}
+
+.navItem {
+  font-family: "MetricHPE-Web-Light", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  .navList {
+    flex-direction: row;
+    margin-top: 2.4em;
+  }
+
+  .navItem {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navList {
+    margin-top: 2.6em;
+  }
+
+  .navItem {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+  }
+}

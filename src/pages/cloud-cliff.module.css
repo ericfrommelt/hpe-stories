@@ -180,25 +180,25 @@ ul {
   }
 }
 
-ul > li {
+.contentList > li {
   font-family: "HPESimpleWeb-Regular", "Courier New", Courier, monospace;
   font-size: 1rem;
 }
 
 @media screen and (min-width: 768px) {
-  ul > li {
+  .contentList > li {
     font-size: 1.2rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  ul > li {
+  .contentList > li {
     font-size: 1.4rem;
     line-height: 2rem;
   }
 }
 
-Ul > li:before {
+.contentList > li:before {
   content: "";
   display: inline-block;
   height: 0.75rem;

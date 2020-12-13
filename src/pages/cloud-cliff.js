@@ -2,11 +2,9 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import style from "./cloud-cliff.module.css"
-import Logo from "../svg/logo.inline.svg"
 import BackgroundImage from "gatsby-background-image"
 import Img from "gatsby-image"
-import { checkPropTypes } from "prop-types"
-
+import PrimaryNav from "../components/primary-nav"
 
 
 const CloudCliff = (props) => (
@@ -15,8 +13,8 @@ const CloudCliff = (props) => (
       <BackgroundImage
         fluid={ props.data.headerImage.childImageSharp.fluid }
       >
+        <PrimaryNav></PrimaryNav>
         <div className={ style.masthead}>
-          <div className={style.logo}><Logo /></div>
           <h1 className={style.title}>Master the Cloud Cliff: <span className={style.subtitle}>Three Critical Business Concerns</span></h1>
         </div>
       </BackgroundImage>
