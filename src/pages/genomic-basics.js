@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import LayoutGenomic from '../components/layout-genomic';
+import Layout from '../components/layout';
 import style from './genomic-basics.module.css';
 import GenomicTitle from '../components/genomic-title';
 import Logo from '../svg/logo.inline.svg';
@@ -9,8 +9,8 @@ import Atgc from '../components/atgc';
 import CtaButton from '../components/cta-button';
 
 const GenomicBasics = (props) => (
-  <LayoutGenomic>
-    <div className={style.gridWrapper}>
+  <Layout>
+    <div className={`${style.gridWrapper} ${style.genomicBody}`}>
       <div className={style.logo}>
         <Logo />
       </div>
@@ -24,7 +24,7 @@ const GenomicBasics = (props) => (
       </figure>
     </div>
 
-    <div className={style.gridWrapper}>
+    <div className={`${style.gridWrapper} ${style.genomicBody}`}>
       <div className={style.circleLine}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 871 22">
           <g id="Layer_2" data-name="Layer 2" stroke-miterlimit="10" stroke-width="2" fill="none">
@@ -141,7 +141,7 @@ const GenomicBasics = (props) => (
       </div>
     </div>
     
-    <div className={style.gridWrapper}>
+    <div className={`${style.gridWrapper} ${style.genomicBody}`}>
       <figure className={style.markerFigure}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 220">
           <rect width="310" height="220" fill="#425563" id="Background"/>
@@ -223,7 +223,7 @@ const GenomicBasics = (props) => (
         <a className={style.ctaLink} href="">Prepare your healthcare organization for the first wave of genomics</a></p>
       </div>
     </footer>
-  </LayoutGenomic>
+  </Layout>
 )
 
 export default GenomicBasics

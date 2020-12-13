@@ -1,3 +1,8 @@
+.genomicBody {
+  background-color: #425563;
+  overflow: hidden;
+}
+
 .gridWrapper {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));

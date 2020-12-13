@@ -10,7 +10,6 @@ gsap.registerPlugin(CustomEase, DrawSVGPlugin);
 const GenomicTitle = () => {
   const svgWrapper = useRef(null);
   const typeBg = '#425563';
-  // #425563
 
   useEffect(() => {
     const [svgElements] = svgWrapper.current.children;
