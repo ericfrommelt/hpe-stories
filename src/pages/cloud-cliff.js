@@ -5,6 +5,7 @@ import style from "./cloud-cliff.module.css"
 import BackgroundImage from "gatsby-background-image"
 import Img from "gatsby-image"
 import PrimaryNav from "../components/primary-nav"
+import CtaButton from "../components/cta-button"
 
 
 const CloudCliff = (props) => (
@@ -80,20 +81,16 @@ const CloudCliff = (props) => (
         <p>For organizations like ours that deploy IoT solutions, security is not optional; it's essential.</p>
         <cite>&mdash; Healthcare IT executive</cite>
       </blockquote>
-      <footer className={ style.cloudCliffFooter }>
-        <div className={style.btnWrapper}>
-          <div className={ style.btnArrow }>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.24 82.83">
-              <title>transformationCTA_Arrow</title>
-              <g id="Layer_2" data-name="Layer 2"><g id="Content"><polyline className={ style.cls1 } points="1.41 1.41 41.41 41.41 1.41 81.41"/></g></g></svg>
-          </div>
-        </div>
-        <div className={style.ctaWrapper}>
-          <p className={style.ctacopy}>Get the details on how HPE can help you find your right mix of hybrid IT, including lessons from companies that have successfully faced cloud challenges. Download the full report:</p>
-          <a href="">Master the Cloud Cliff: How hybrid IT helps companies balance performance, cost, and control</a>
-        </div>
-      </footer>
     </div>
+    <footer>
+      <div className={style.ctaWrapper}>
+        <div className={style.ctaButton}>
+          <CtaButton></CtaButton>
+        </div>
+        <p className={style.ctacopy}>Get the details on how HPE can help you find your right mix of hybrid IT, including lessons from companies that have successfully faced cloud challenges. Download the full report:<br />
+        <a href="">Master the Cloud Cliff: How hybrid IT helps companies balance performance, cost, and control</a></p>
+      </div>
+    </footer>
   </Layout>
 )
 

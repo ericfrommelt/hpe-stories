@@ -219,15 +219,12 @@
   font-family: "MetricHPE-Web-SemiBold";
   font-size: 1.2rem;
   line-height: 1.4rem;
-  margin-top: 6em;
-  margin-bottom: 1em;
+  margin: 3em 0;
 }
 
 @media screen and (min-width: 768px) {
   .ctaCopy {
-    grid-column: 3 / span 8;
-    margin-top: 4.7em;
-    margin-bottom: 1em;
+    grid-column: 4 / span 8;
     font-size: 1.625rem;
     line-height: 1.925rem;
   }
@@ -241,11 +238,12 @@
 }
 
 .ctaButton {
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 2;
+  margin: 3em 0 0 0;
 }
 
 @media screen and (min-width: 760px) {
   .ctaButton {
-    grid-column: 1 / span 2;
+    margin: 4em 0 0 0;
   }
 }
