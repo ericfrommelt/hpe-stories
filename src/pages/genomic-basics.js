@@ -1,15 +1,20 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import Layout from '../components/layout';
-import PrimaryNav from '../components/primary-nav';
-import style from './genomic-basics.module.css';
-import GenomicTitle from '../components/genomic-title';
-import Atgc from '../components/atgc';
-import CtaButton from '../components/cta-button';
+import React from 'react'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import Layout from '../components/layout'
+import { Helmet } from 'react-helmet'
+import PrimaryNav from '../components/primary-nav'
+import style from './genomic-basics.module.css'
+import GenomicTitle from '../components/genomic-title'
+import Atgc from '../components/atgc'
+import CtaButton from '../components/cta-button'
 
 const GenomicBasics = (props) => (
   <Layout>
+   <Helmet>
+      <meta charSet="utf-8" />
+      <title>Genomic Basics for CIOs</title>
+    </Helmet>
     <div className={style.genomicBody}>
       <PrimaryNav></PrimaryNav>
     </div>

@@ -1,15 +1,19 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Layout from "../components/layout"
-import style from "./cloud-cliff.module.css"
-import BackgroundImage from "gatsby-background-image"
-import Img from "gatsby-image"
-import PrimaryNav from "../components/primary-nav"
-import CtaButton from "../components/cta-button"
-
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import { Helmet } from 'react-helmet'
+import style from './cloud-cliff.module.css'
+import BackgroundImage from 'gatsby-background-image'
+import Img from 'gatsby-image'
+import PrimaryNav from '../components/primary-nav'
+import CtaButton from '../components/cta-button'
 
 const CloudCliff = (props) => (
   <Layout>
+   <Helmet>
+      <meta charSet="utf-8" />
+      <title>Master the Cloud Cliff</title>
+    </Helmet>
     <header>
       <BackgroundImage
         fluid={ props.data.headerImage.childImageSharp.fluid }
@@ -20,9 +24,7 @@ const CloudCliff = (props) => (
         </div>
       </BackgroundImage>
     </header>
-
     <p className={style.introcopy}>Many executives acknowledge the benefits of public cloud services, but say it's important to navigate the "Cloud Cliffs" that can create barriers for enterprises changing strategic direction.</p>
-
     <div className={ style.cloudCliffOne }>
       <Img 
         fluid={ props.data.imageOne.childImageSharp.fluid }

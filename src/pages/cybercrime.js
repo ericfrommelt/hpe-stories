@@ -1,18 +1,22 @@
 import React from 'react'
-import { graphql, useStaticQuery } from "gatsby"
-import Layout from "../components/layout"
-import style from "./cybercrime.module.css"
-import Logo from "../svg/logo.inline.svg"
-import BackgroundImage from "gatsby-background-image"
-import ParentSize from "@visx/responsive/lib/components/ParentSize"
-import BarGraph from "../components/graph"
-import GraphBottom from "../components/graph-bottom"
-import CybercrimeTitle from "../components/cybercrime-title"
-import CtaButton from "../components/cta-button"
-import PrimaryNav from "../components/primary-nav"
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import { Helmet } from 'react-helmet'
+import style from './cybercrime.module.css'
+import BackgroundImage from 'gatsby-background-image'
+import ParentSize from '@visx/responsive/lib/components/ParentSize'
+import BarGraph from '../components/graph'
+import GraphBottom from '../components/graph-bottom'
+import CybercrimeTitle from '../components/cybercrime-title'
+import CtaButton from '../components/cta-button'
+import PrimaryNav from '../components/primary-nav'
 
 const CyberCrime = (props) => (
   <Layout backgroundColor="#000">
+   <Helmet>
+      <meta charSet="utf-8" />
+      <title>Cybercrime: The Long Road to Recovery</title>
+    </Helmet>
     <BackgroundImage
       fluid={ props.data.hackerImage.childImageSharp.fluid }
       >
