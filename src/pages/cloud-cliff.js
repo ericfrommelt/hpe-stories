@@ -6,7 +6,7 @@ import style from './cloud-cliff.module.css'
 import BackgroundImage from 'gatsby-background-image'
 import Img from 'gatsby-image'
 import PrimaryNav from '../components/primary-nav'
-import CtaButton from '../components/cta-button'
+import StoryFooter from '../components/story-footer'
 
 const CloudCliff = (props) => (
   <Layout>
@@ -84,15 +84,10 @@ const CloudCliff = (props) => (
         <cite>&mdash; Healthcare IT executive</cite>
       </blockquote>
     </div>
-    <footer className={style.cloudCliffFooter}>
-      <div className={style.ctaWrapper}>
-        <div className={style.ctaButton}>
-          <CtaButton></CtaButton>
-        </div>
-        <p className={style.ctacopy}>Get the details on how HPE can help you find your right mix of hybrid IT, including lessons from companies that have successfully faced cloud challenges. Download the full report:<br />
-        <a href="">Master the Cloud Cliff: How hybrid IT helps companies balance performance, cost, and control</a></p>
-      </div>
-    </footer>
+    <StoryFooter
+      ctaCopy="Get the details on how HPE can help you find your right mix of hybrid IT, including lessons from companies that have successfully faced cloud challenges. Download the full report:"
+      linkCopy="Master the Cloud Cliff: How hybrid IT helps companies balance performance, cost, and control"
+    />
   </Layout>
 )
 

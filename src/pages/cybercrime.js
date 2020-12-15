@@ -8,8 +8,8 @@ import ParentSize from '@visx/responsive/lib/components/ParentSize'
 import BarGraph from '../components/graph'
 import GraphBottom from '../components/graph-bottom'
 import CybercrimeTitle from '../components/cybercrime-title'
-import CtaButton from '../components/cta-button'
 import PrimaryNav from '../components/primary-nav'
+import StoryFooter from '../components/story-footer'
 
 const CyberCrime = (props) => (
   <Layout backgroundColor="#000">
@@ -38,14 +38,10 @@ const CyberCrime = (props) => (
             <ParentSize>{({ width, height }) => <GraphBottom width={width} height={height} />}</ParentSize>
           </div>
         </div>
-        <footer className={ style.cybercrimeFooter }>
-          <div className={style.footerBar}></div>
-          <div className={style.ctaButton}><CtaButton /></div>
-          <div className={style.ctaWrapper}>
-            <p className={style.ctacopy}>Get the details on how to raise your security profile and drive innovation. <br />Download the full report from Ponemon Institute:</p>
-            <a href="">Cost of Cyber Crime Study &amp; the Risk of Business Innovation</a>
-          </div>
-        </footer>
+        <StoryFooter
+          ctaCopy="Get the details on how to raise your security profile and drive innovation. Download the full report from Ponemon Institute:"
+          linkCopy="Cost of Cyber Crime Study &amp; the Risk of Business Innovation"
+        />
       </BackgroundImage>
   </Layout>
 )

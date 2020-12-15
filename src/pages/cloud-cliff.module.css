@@ -461,74 +461,13 @@ cite {
   box-shadow:
     /* top "inner border" */ inset 0 20px 0 0 black,
     /* right "inner border" */ inset -20px 0 0 0 #ff8d6d;
-  margin: 0;
+  margin: 0 0 2em 0;
   z-index: 1000;
 }
 
 @media screen and (min-width: 768px) {
   .cloudCliffThreeQuote {
     grid-column: 4 / span 9;
-  }
-}
-
-.cloudCliffFooter {
-  margin: -4em 0 0 0;
-  padding-bottom: 4em;
-  background-color: #fff;
-}
-
-.cloudCliffFooter a {
-  grid-column: 4 / span 9;
-  font-family: "MetricHPE-Web-Regular", sans-serif;
-  font-size: 1rem;
-  line-height: 1rem;
-  color: #ff8d6d;
-}
-
-@media screen and (min-width: 768px) {
-  .cloudCliffFooter a {
-    font-size: 1.5rem;
-    line-height: 1.7rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .cloudCliffFooter a {
-    font-size: 1.7rem;
-    line-height: 1.9rem;
-  }
-}
-
-.ctaWrapper {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  margin: 2em 0 0 0;
-}
-
-.ctaButton {
-  grid-column: 1 / span 2;
-  margin: 6em 0 0 0;
-}
-
-.ctacopy {
-  grid-column: 4 / span 8;
-  font-family: "MetricHPE-Web-SemiBold";
-  font-size: 1.2rem;
-  line-height: 1.2rem;
-  margin: 3em 0;
-}
-
-@media screen and (min-width: 768px) {
-  .ctacopy {
-    font-size: 1.625rem;
-    line-height: 1.725rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .ctacopy {
-    font-size: 1.75rem;
-    line-height: 1.75rem;
   }
 }
 

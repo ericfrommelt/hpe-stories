@@ -7,7 +7,7 @@ import PrimaryNav from '../components/primary-nav'
 import style from './genomic-basics.module.css'
 import GenomicTitle from '../components/genomic-title'
 import Atgc from '../components/atgc'
-import CtaButton from '../components/cta-button'
+import StoryFooter from '../components/story-footer'
 
 const GenomicBasics = (props) => (
   <Layout>
@@ -218,16 +218,10 @@ const GenomicBasics = (props) => (
         <p>Because markers are a small subset of whole genome sequencing, storage needs are much smaller.</p>
       </div>
     </div>
-
-    <footer className={style.genomicFooter}>
-      <div className={style.ctaWrapper}>
-        <div className={style.ctaButton}>
-          <CtaButton />
-        </div>
-        <p className={style.ctaCopy}>Learn more about readying IT to take advantage genetic data. <br />Download the full report from Gartner:<br />
-        <a className={style.ctaLink} href="">Prepare your healthcare organization for the first wave of genomics</a></p>
-      </div>
-    </footer>
+    <StoryFooter
+      ctaCopy="Learn more about readying IT to take advantage genetic data. Download the full report from Gartner:"
+      linkCopy="Prepare your healthcare organization for the first wave of genomics"
+    />
   </Layout>
 )
 
