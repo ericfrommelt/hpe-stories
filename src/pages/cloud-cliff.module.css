@@ -193,8 +193,8 @@ ul {
 
 @media screen and (min-width: 1200px) {
   .contentList > li {
-    font-size: 1.4rem;
-    line-height: 2rem;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
   }
 }
 
@@ -206,6 +206,12 @@ ul {
   background-size: contain;
   background-repeat: no-repeat;
   padding-left: 1.5rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .contentList > li:before {
+    height: 0.9rem;
+  }
 }
 
 blockquote > p {
@@ -451,7 +457,7 @@ cite {
   grid-column: 2 / span 11;
   background-color: #2ad2c9;
   color: #425563;
-  padding: 4em 3em 3em 3em;
+  padding: 6em 3em 5em 3em;
   box-shadow:
     /* top "inner border" */ inset 0 20px 0 0 black,
     /* right "inner border" */ inset -20px 0 0 0 #ff8d6d;
@@ -465,13 +471,13 @@ cite {
   }
 }
 
-footer {
+.cloudCliffFooter {
   margin: -4em 0 0 0;
   padding-bottom: 4em;
   background-color: #fff;
 }
 
-footer a {
+.cloudCliffFooter a {
   grid-column: 4 / span 9;
   font-family: "MetricHPE-Web-Regular", sans-serif;
   font-size: 1rem;
@@ -480,14 +486,14 @@ footer a {
 }
 
 @media screen and (min-width: 768px) {
-  footer a {
+  .cloudCliffFooter a {
     font-size: 1.5rem;
     line-height: 1.7rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  footer a {
+  .cloudCliffFooter a {
     font-size: 1.7rem;
     line-height: 1.9rem;
   }

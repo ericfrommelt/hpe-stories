@@ -84,7 +84,7 @@ const CloudCliff = (props) => (
         <cite>&mdash; Healthcare IT executive</cite>
       </blockquote>
     </div>
-    <footer>
+    <footer className={style.cloudCliffFooter}>
       <div className={style.ctaWrapper}>
         <div className={style.ctaButton}>
           <CtaButton></CtaButton>

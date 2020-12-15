@@ -160,14 +160,14 @@ footer a {
 .ctaWrapper {
   grid-column: 4 / span 8;
   grid-row: 1;
-  margin: 8em 0 1em 0;
+  margin: 8em 0 6em 0;
 }
 
 @media screen and (min-width: 768px) {
   .ctaWrapper {
     grid-column: 3 / span 8;
     grid-row: 1;
-    margin: 6em 0 1em 0;
+    margin: 6em 0 6em 0;
   }
 }
 

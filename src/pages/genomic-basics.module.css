@@ -196,6 +196,22 @@
   margin-top: 1.4em;
 }
 
+.markerList > li {
+  font-family: "HPESimpleWeb-Regular", "Courier New", Courier, monospace;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.markerList > li:before {
+  content: "";
+  display: inline-block;
+  height: 0.75rem;
+  background-image: url("../svg/arrow-turq.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 1.5rem;
+}
+
 @media screen and (min-width: 760px) {
   .markerFigure {
     grid-column: 2 / span 5;
@@ -209,9 +225,14 @@
   }
 }
 
+.genomicFooter {
+  background-color: #fff;
+}
+
 .ctaWrapper {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
+  padding: 4em 0;
 }
 
 .ctaCopy {

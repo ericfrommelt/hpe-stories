@@ -224,7 +224,7 @@ const GenomicBasics = (props) => (
         <div className={style.ctaButton}>
           <CtaButton />
         </div>
-        <p className={style.ctaCopy}>Learn more about readying IT to take advantage genetic data. Download the full report from Gartner:<br />
+        <p className={style.ctaCopy}>Learn more about readying IT to take advantage genetic data. <br />Download the full report from Gartner:<br />
         <a className={style.ctaLink} href="">Prepare your healthcare organization for the first wave of genomics</a></p>
       </div>
     </footer>

@@ -42,7 +42,7 @@ const CyberCrime = (props) => (
           <div className={style.footerBar}></div>
           <div className={style.ctaButton}><CtaButton /></div>
           <div className={style.ctaWrapper}>
-            <p className={style.ctacopy}>Get the details on how to raise your security profile and drive innovation. Download the full report from Ponemon Institute:</p>
+            <p className={style.ctacopy}>Get the details on how to raise your security profile and drive innovation. <br />Download the full report from Ponemon Institute:</p>
             <a href="">Cost of Cyber Crime Study &amp; the Risk of Business Innovation</a>
           </div>
         </footer>
