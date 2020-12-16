@@ -173,16 +173,16 @@
 
 @font-face {
   font-family: "MetricHPE-Web-SemiBold";
-  src: url("../fonts/MetricHPE-Web-SemiBold.eot");
-  src: url("../fonts/MetricHPE-Web-SemiBold.woff") format("woff");
+  src: url("../fonts/MetricHPE-Web-Semibold.eot");
+  src: url("../fonts/MetricHPE-Web-Semibold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "MetricHPE-Web-SemiBold-Italic";
-  src: url("../fonts/MetricHPE-Web-SemiBoldItalic.eot");
-  src: url("../fonts/MetricHPE-Web-SemiBoldItalic.woff") format("woff");
+  src: url("../fonts/MetricHPE-Web-SemiboldItalic.eot");
+  src: url("../fonts/MetricHPE-Web-SemiboldItalic.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
