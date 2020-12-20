@@ -59,6 +59,7 @@
     font-size: 12.125rem;
     line-height: 9.125rem;
     max-width: 85%;
+    margin-top: 1.6em;
   }
 }
 
@@ -201,11 +202,11 @@ ul {
 .contentList > li:before {
   content: "";
   display: inline-block;
-  height: 0.75rem;
+  height: 0.7rem;
   background-image: url("../svg/arrow-turq.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  padding-left: 1.5rem;
+  padding-left: 1.6rem;
 }
 
 @media screen and (min-width: 1200px) {

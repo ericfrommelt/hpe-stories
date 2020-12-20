@@ -50,7 +50,7 @@ const IndexPage = (props) => (
     <section className={style.intro}>
       <h1 className={style.intro__title}>Editorial experiences for HPE</h1>
       <p classname={style.intro__copy}>Design and development by Eric Frommelt</p>
-      <p className={style.tech}>Technology utilized: React/Gatsby, CSS Modules, GSAP, visx</p>
+      <p className={style.tech}>React/Gatsby, CSS Modules, GSAP, visx</p>
       <div className={style.colorBar}></div>
     </section> 
   </Layout>
