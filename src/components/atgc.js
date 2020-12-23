@@ -16,6 +16,11 @@ const Atgc = () => {
 
     gsap.set("#Adenine", { autoAlpha: 1 });
     gsap.set("#connectorOne", { autoAlpha: 1 });
+    gsap.set("#Thymine", { autoAlpha: 1 });
+    gsap.set("#connectorTwo", { autoAlpha: 1 });
+    gsap.set("#Guanine", { autoAlpha: 1 });
+    gsap.set("#connectorThree", { autoAlpha: 1 });
+    gsap.set("#Cytosine", { autoAlpha: 1 });
 
     function timelineAtgc() {
       const tl = new TimelineLite({
@@ -23,7 +28,7 @@ const Atgc = () => {
           trigger: "#bases",
           start: "bottom 90%",
           end: "bottom 50%",
-          markers: true,
+          markers: false,
           scrub: 1,
         }
       });
