@@ -1,10 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import style from './genomic-title.module.css';
 import { gsap } from 'gsap';
-import { TweenMax, TimelineMax, TimelineLite } from 'gsap';
+import { TimelineMax } from 'gsap';
 import CustomEase from 'gsap/CustomEase.js';
 import DrawSVGPlugin from 'gsap/DrawSVGPlugin.js';
-import { Timeline } from 'gsap/gsap-core';
 gsap.registerPlugin(CustomEase, DrawSVGPlugin);
 
 const GenomicTitle = () => {
@@ -218,19 +217,19 @@ const GenomicTitle = () => {
     }
 
     master.add(timelineG());
-    master.add(timelineE(), "-=1");
-    master.add(timelineN(), "-=1");
-    master.add(timelineO(), "-=2");
-    master.add(timelineM(), "-=1");
-    master.add(timelineI(), "-=2");
-    master.add(timelineC(), "-=1");
-    master.add(timelineB(), "-=2");
-    master.add(timelineA(), "-=1");
-    master.add(timelineS(), "-=2");
-    master.add(timelineI2(), "-=1");
-    master.add(timelineC2(), "-=2");
-    master.add(timelineS2(), "-=2");
-    master.add(timelineText(), "-=2");
+    master.add(timelineE(), "<.2");
+    master.add(timelineN(), "<.7");
+    master.add(timelineO(), "<.6");
+    master.add(timelineM(), "<.5");
+    master.add(timelineI(), "<.4");
+    master.add(timelineC(), "<.3");
+    master.add(timelineB(), "-=4");
+    master.add(timelineA(), "<.7");
+    master.add(timelineS(), "<.6");
+    master.add(timelineI2(), "<.5");
+    master.add(timelineC2(), "<.4");
+    master.add(timelineS2(), "<.3");
+    master.add(timelineText(), "<1.5");
   }, []);
 
   return (
