@@ -51,7 +51,7 @@ const GenomicBasics = (props) => {
           trigger: "#billion",
           start: "bottom 90%",
           end: "bottom 25%",
-          markers: true,
+          markers: false,
           scrub: 1,
         }
       });
