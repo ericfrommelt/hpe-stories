@@ -35,6 +35,7 @@
 
 .story__title {
   composes: type;
+  line-height: 1.8rem;
   position: relative;
   color: #fff;
   margin: 0;
@@ -106,4 +107,39 @@
 .colorBar:after {
   content: ".";
   visibility: hidden;
+}
+
+.home__link {
+  color: white;
+  font-weight: 700;
+  text-decoration-color: rgba(1, 169, 130, 1);
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: 3px;
+}
+
+.back {
+  display: flex;
+  flex-direction: row;
+}
+
+.back__arrow {
+  width: 1em;
+  height: 1em;
+  transform: rotate(180deg);
+  margin: 1em 0 0 0.5em;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}
+
+.back__alphanumeric {
+  margin: 0.5em 0 0 0.5em;
+}
+
+.back__alphanumeric a {
+  color: white;
+  text-decoration-color: rgba(1, 169, 130, 1);
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: 3px;
+}
+.back:hover .back__arrow {
+  margin: 1em 0 0 0;
 }
