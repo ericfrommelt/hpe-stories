@@ -47,32 +47,37 @@ const IndexPage = (props) => (
       <div className={style.bar__genomic}></div>
       <div className={style.bar__cyberCrime}></div>
     </section>
-    <section className={style.intro}>
-      <h1 className={style.intro__title}>Editorial experiences for HPE</h1>
-      <p classname={style.intro__copy}>Design and development by <a className={style.home__link} href="http://www.alphanumeric.io">Eric Frommelt</a></p>
-      <p className={style.tech}>React/Gatsby, CSS Modules, GSAP, visx</p>
-      <div className={style.colorBar}></div>
-      <div className={style.back}>
-        <div className={style.back__arrow}>
-          <svg
-          aria-labelledby="backarrow"
-          id="backarrow"
-          role="link"
-          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.41 14">
-            <title>backarrow</title>
-            <g id="backarrow" data-name="backarrow" fill="none" stroke="#fff" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="2px">
-                <polyline class="cls-1" points="11 1 17 7 11 13" />
-                <line class="cls-1" x1="17" y1="7" x2="1" y2="7"/>
-            </g>
-          </svg>
+    <div className={style.flex__wrap}>
+      <section className={style.intro}>
+        <h1 className={style.intro__title}>Editorial experiences for HPE</h1>
+        <p classname={style.intro__copy}>Design and development by <a className={style.home__link} href="http://www.alphanumeric.io">Eric Frommelt</a></p>
+        <p className={style.tech}>React/Gatsby, CSS Modules, GSAP, visx</p>
+        <div className={style.colorBar}></div>
+      </section> 
+      <section className={style.footer}>
+        <div className={style.backWrap}>
+          <div className={style.back}>
+            <div className={style.back__arrow}>
+              <svg
+              aria-labelledby="backarrow"
+              id="backarrow"
+              role="link"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.87 15.83">
+                <title>backarrow</title>
+                <g id="backarrow" data-name="backarrow" fill="none" stroke="#fff" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="2px">
+                  <path d="M21.87 7.91h-20M8.33 14.83L1.41 7.91 8.33 1"/>
+                </g>
+              </svg>
+            </div>
+            <div className={style.back__alphanumeric}>
+              <a className={style.link__a} href="https://www.alphanumeric.io/">
+                <p>Back to <span className={style.alphanumeric}>Alphanumeric</span></p>
+              </a>
+            </div>
+          </div>
         </div>
-        <div className={style.back__alphanumeric}>
-          <a href="https://www.alphanumeric.io/">
-            <p>Back to <span className={style.alphanumeric}>Alphanumeric</span></p>
-          </a>
-        </div>
-      </div>
-    </section> 
+      </section>
+    </div>
   </Layout>
 )
 

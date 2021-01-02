@@ -9,6 +9,10 @@
   min-height: 20em;
 }
 
+.transition {
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}
+
 @media screen and (min-width: 1000px) {
   .bgImage {
     min-height: 26em;
@@ -74,6 +78,7 @@
 }
 
 .intro {
+  flex: 1;
   color: #fff;
   padding: 4em;
 }
@@ -98,6 +103,7 @@
 }
 
 .colorBar {
+  margin-bottom: 4em;
   margin-top: 1em;
   background-color: rgba(1, 169, 130, 1);
   width: 2em;
@@ -117,7 +123,18 @@
   text-underline-offset: 3px;
 }
 
+.backWrap {
+  display: inline-block;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+  margin: 0 0 0 0.5rem;
+}
+
+.backWrap:hover {
+  margin: 0 0 0 -0.5rem;
+}
+
 .back {
+  align-self: flex-end;
   display: flex;
   flex-direction: row;
 }
@@ -125,13 +142,16 @@
 .back__arrow {
   width: 1em;
   height: 1em;
-  transform: rotate(180deg);
-  margin: 1em 0 0 0.5em;
-  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+  margin: 0.6rem 0 0 0;
 }
 
 .back__alphanumeric {
-  margin: 0.5em 0 0 0.5em;
+  composes: transition;
+  margin: 0.5em 0 0 0.4em;
+}
+
+.back__alphanumeric:hover {
+  margin: 0.5rem 0 0 0.2rem;
 }
 
 .back__alphanumeric a {
@@ -140,6 +160,14 @@
   text-decoration-thickness: 0.125em;
   text-underline-offset: 3px;
 }
-.back:hover .back__arrow {
-  margin: 1em 0 0 0;
+
+.flex__wrap {
+  display: flex;
+  min-height: 50vh;
+  flex-direction: column;
+}
+
+.footer {
+  margin: 0 0 4rem 0;
+  padding: 0 4em;
 }
