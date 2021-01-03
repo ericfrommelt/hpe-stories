@@ -69,4 +69,4 @@ yarn-error.log
 .yarn-integrity
 
 #gsap
-!gsap-bonus.tgz
+gsap-bonus.tgz
