@@ -6,8 +6,22 @@ import style from './primary-nav.module.css'
 const PrimaryNav = () => (
   <header className={style.gridWrapper}>
     <div className={style.logo}>
+      <Logo></Logo>
+    </div>
+    <div className={ style.backButton }>
       <Link to="/">
-        <Logo></Logo>
+        <div className={style.back__arrow}>
+          <svg
+          aria-labelledby="backarrow"
+          id="backarrow"
+          role="link"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.87 15.83">
+            <title>backarrow</title>
+            <g id="backarrow" data-name="backarrow" fill="none" stroke="#fff" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="2px">
+              <path d="M21.87 7.91h-20M8.33 14.83L1.41 7.91 8.33 1"/>
+            </g>
+          </svg>
+        </div>
       </Link>
     </div>
     <nav className={style.storyNav}>
