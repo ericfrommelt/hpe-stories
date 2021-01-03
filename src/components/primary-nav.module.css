@@ -1,17 +1,31 @@
+.transition {
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}
+
 .gridWrapper {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: center;
 }
 
 .logo {
+  display: none;
+}
+
+.back__arrow {
+  max-width: 2rem;
+}
+
+.backButton {
   grid-column: 2 / span 2;
-  grid-row: 1;
-  max-width: 7.5em;
-  margin-top: 2em;
+  background-color: rgba(1, 169, 130, 0);
+  padding: 0.6rem 0.5rem 0.3rem 0.5rem;
+  margin-right: 1rem;
+  margin-top: 0.3rem;
 }
 
 .storyNav {
-  grid-column: 5 / span 7;
+  grid-column: 4 / span 8;
   grid-row: 1;
 }
 
@@ -19,7 +33,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 2em;
+  align-items: center;
+  margin-top: 2.4rem;
 }
 
 .navList a {
@@ -31,6 +46,10 @@
   border-left: 4px solid #fff;
 }
 
+.navList > li:first-child a {
+  border-left: none;
+}
+
 .navItem {
   font-family: "MetricHPE-Web-Light", sans-serif;
   font-size: 0.8rem;
@@ -38,6 +57,28 @@
 }
 
 @media screen and (min-width: 800px) {
+  .logo {
+    display: block;
+    grid-column: 2 / span 2;
+    grid-row: 1;
+    max-width: 7.5em;
+  }
+
+  .backButton {
+    composes: transition;
+    grid-column: 5 / span 1;
+  }
+
+  .backButton:hover {
+    margin-left: -0.5rem;
+    background-color: rgba(1, 169, 130, 1);
+  }
+
+  .storyNav {
+    grid-column: 6 / span 6;
+    grid-row: 1;
+  }
+
   .navList {
     flex-direction: row;
     margin-top: 2.4em;
