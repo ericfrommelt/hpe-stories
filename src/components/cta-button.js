@@ -11,19 +11,18 @@ const CtaButton = () => {
   useEffect(() => {
     const [svgElements] = svgWrapper.current.children;
     const master = gsap.timeline();
-    gsap.set("#ctaArrow", {x: 0});
 
     function timelineArrow() {
       const tl = new TimelineLite({
         scrollTrigger: {
-          trigger: "#ctaArrow",
+          trigger: "#ctaButton",
           start: "bottom 100%",
-          end: "bottom 90%",
+          end: "top 100%",
           markers: false,
           scrub: 1,
         }
       });
-        tl.from("#ctaArrow", { x: -100, duration: 0.2});
+        tl.from("#ctaArrow", { x: -1000, duration: 0.5});
       return tl
     }
     master.add(timelineArrow());

@@ -46,10 +46,6 @@
   border-left: 4px solid #fff;
 }
 
-.navList > li:first-child a {
-  border-left: none;
-}
-
 .navItem {
   font-family: "MetricHPE-Web-Light", sans-serif;
   font-size: 0.8rem;
