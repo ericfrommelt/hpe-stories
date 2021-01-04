@@ -8,7 +8,7 @@ import Img from 'gatsby-image'
 import PrimaryNav from '../components/primary-nav'
 import StoryFooter from '../components/story-footer'
 import { gsap } from 'gsap'
-import { TweenMax, TimelineLite } from 'gsap'
+import { TimelineLite } from 'gsap'
 import CustomEase from 'gsap/CustomEase.js'
 gsap.registerPlugin(CustomEase)
 
@@ -19,21 +19,22 @@ const CloudCliff = (props) => {
     const [svgElements] = svgWrapper.current.children
     const master = gsap.timeline()
     CustomEase.create("typeEase", ".9,.03,.04,.99")
+    const dur = 5;
 
     function bulletArrowsOne() {
       const tl = new TimelineLite({
         scrollTrigger: {
           trigger: "#b1",
-          start: "top center",
+          start: "20px 80%",
           end: "center bottom",
           markers: false,
           scrub: 1,
           endTrigger: ".cloudCliffOneImage"
         },
       });
-      tl.from("#b1", {x: -600, ease: "typeEase"});
-      tl.from("#b2", {x: -600, ease: "typeEase"});
-      tl.from("#b3", {x: -600, ease: "typeEase"});
+      tl.from("#b1", {x: -600, ease: "linear"});
+      tl.from("#b2", {x: -600, ease: "linear"});
+      tl.from("#b3", {x: -600, ease: "linear"});
       return tl
     }
 
@@ -41,16 +42,16 @@ const CloudCliff = (props) => {
       const tl = new TimelineLite({
         scrollTrigger: {
           trigger: "#b4",
-          start: "top center",
+          start: "20px 80%",
           end: "center bottom",
           markers: false,
           scrub: 1,
           endTrigger: ".cloudCliffTwoImage"
         },
       });
-      tl.from("#b4", {x: -800, ease: "typeEase"});
-      tl.from("#b5", {x: -800, ease: "typeEase"});
-      tl.from("#b6", {x: -800, ease: "typeEase"});
+      tl.from("#b4", {x: -1400, ease: "linear"});
+      tl.from("#b5", {x: -1400, ease: "linear"});
+      tl.from("#b6", {x: -1400, ease: "linear"});
       return tl
     }
 
@@ -58,16 +59,16 @@ const CloudCliff = (props) => {
       const tl = new TimelineLite({
         scrollTrigger: {
           trigger: "#b7",
-          start: "top center",
+          start: "20px 80%",
           end: "center bottom",
           markers: false,
           scrub: 1,
           endTrigger: ".cloudCliffImage"
         },
       });
-      tl.from("#b7", {x: -800, ease: "typeEase"});
-      tl.from("#b8", {x: -800, ease: "typeEase"});
-      tl.from("#b9", {x: -800, ease: "typeEase"});
+      tl.from("#b7", {x: -800, ease: "linear"});
+      tl.from("#b8", {x: -800, ease: "linear"});
+      tl.from("#b9", {x: -800, ease: "linear"});
       return tl
     }
 
