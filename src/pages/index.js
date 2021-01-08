@@ -51,7 +51,7 @@ const IndexPage = (props) => (
       <section className={style.intro}>
         <h1 className={style.intro__title}>Editorial experiences for HPE</h1>
         <p classname={style.intro__copy}>Design and development by <a className={style.home__link} href="http://www.alphanumeric.io">Eric Frommelt</a></p>
-        <p className={style.tech}>React/Gatsby, CSS Modules, GSAP, visx</p>
+        <p className={style.tech}>Gatsby, CSS Modules, GSAP, visx</p>
         <div className={style.colorBar}></div>
       </section> 
       <section className={style.footer}>
