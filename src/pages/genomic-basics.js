@@ -119,7 +119,7 @@ const GenomicBasics = (props) => {
       <div className={`${style.gridWrapper} ${style.genomicBody}`} ref={svgWrapper}>
         <div className={style.circleLine}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 871 22">
-            <g id="lineCircleGreen" data-name="Layer 2" stroke-miterlimit="10" stroke-width="2" fill="none">
+            <g id="lineCircleGreen" data-name="Layer 2" strokeMiterlimit="10" strokeWidth="2" fill="none">
               <line id="lineGreen" x1="21" y1="11" x2="871" y2="11" stroke="#00b388"/>
               <circle id="circleGreen" cx="11" cy="11" r="10" stroke="#01a982"/>
             </g>
@@ -128,16 +128,16 @@ const GenomicBasics = (props) => {
         <div className={style.hexagonsOne}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 333.58 92">
             <g id="hexagonsOne" data-name="hexagonsOne" fill="none" strokeMiterlimit="10">
-              <polygon id="hexOne" points="100.42 11 77.33 11 65.78 31 77.33 51 100.42 51 111.97 31 100.42 11" stroke="#01a982" stroke-width="2"/>
+              <polygon id="hexOne" points="100.42 11 77.33 11 65.78 31 77.33 51 100.42 51 111.97 31 100.42 11" stroke="#01a982" strokeWidth="2"/>
               <polygon id="hexTwo" points="50.78 3.68 40.78 3.68 35.78 12.34 40.78 21 50.78 21 55.78 12.34 50.78 3.68" stroke="#ff8d6d"/>
-              <polygon id="hexThree" points="323.76 1 306.44 1 297.78 16 306.44 31 323.76 31 332.42 16 323.76 1" stroke="#e6e7e8" stroke-width="2"/>
-              <polygon id="hexFour" points="42.12 41 14.8 41 1.14 66 14.8 91 42.12 91 55.78 66 42.12 41" stroke="#e6e7e8" stroke-width="2"/>
+              <polygon id="hexThree" points="323.76 1 306.44 1 297.78 16 306.44 31 323.76 31 332.42 16 323.76 1" stroke="#e6e7e8" strokeWidth="2"/>
+              <polygon id="hexFour" points="42.12 41 14.8 41 1.14 66 14.8 91 42.12 91 55.78 66 42.12 41" stroke="#e6e7e8" strokeWidth="2"/>
             </g>
           </svg>
         </div>
         <div className={style.circleStepLine}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 462 52">
-            <g id="circleStepLine" dats-name="circleStepLine" fill="none" stroke="#2ad2c9" stroke-miterlimit="10" stroke-width="2">
+            <g id="circleStepLine" dats-name="circleStepLine" fill="none" stroke="#2ad2c9" strokeMiterlimit="10" strokeWidth="2">
               <polyline id="stepLine" points="440 11 240 11 240 51 0 51"/>
               <circle id="stepLineCircle" cx="451" cy="11" r="10"/>
             </g>
@@ -154,59 +154,59 @@ const GenomicBasics = (props) => {
                 </g>
               </g>
             </g>
-            <g fill="none" stroke="#ff8d6d" stroke-miterlimit="10" stroke-width="2" id="r1-l">
+            <g fill="none" stroke="#ff8d6d" strokeMiterlimit="10" strokeWidth="2" id="r1-l">
               <circle id="c1-l" id="c1-l" cx="121.03" cy="11" r="10"/>
               <line id="l1-l" x1="131.03" y1="11" x2="251.03" y2="11"/>
             </g>
-            <g fill="none" stroke="#2ad2c9" stroke-miterlimit="10" stroke-width="2" id="r1-r">
+            <g fill="none" stroke="#2ad2c9" strokeMiterlimit="10" strokeWidth="2" id="r1-r">
               <circle id="c1-r" id="c1-r" cx="391.03" cy="11" r="10"/>
               <line id="l1-r" x1="381.03" y1="11" x2="251.03" y2="11"/>
             </g>
-            <g fill="none" stroke="#01a982" stroke-miterlimit="10" stroke-width="2" id="r2-l">
+            <g fill="none" stroke="#01a982" strokeMiterlimit="10" strokeWidth="2" id="r2-l">
               <circle id="c2-l" cx="131.03" cy="41" r="10"/>
               <line id="l2-l" x1="141.03" y1="41" x2="171.03" y2="41"/>
             </g>
-            <g fill="none" stroke="#2ad2c9" stroke-miterlimit="10" stroke-width="2" id="r2-r">
+            <g fill="none" stroke="#2ad2c9" strokeMiterlimit="10" strokeWidth="2" id="r2-r">
               <circle id="c2-r" cx="381.03" cy="41" r="10"/>
               <line id="l2-r" x1="371.03" y1="41" x2="341.03" y2="41"/>
             </g>
-            <g fill="none" stroke="#ff8d6d" stroke-miterlimit="10" stroke-width="2" id="r3-l">
+            <g fill="none" stroke="#ff8d6d" strokeMiterlimit="10" strokeWidth="2" id="r3-l">
               <circle id="c3-l" cx="141.03" cy="71" r="10"/>
               <line id="l3-l" x1="151.03" y1="71" x2="181.03" y2="71"/>
             </g>
-            <g fill="none" stroke="#c6c9ca" stroke-miterlimit="10" stroke-width="2" id="r3-r">
+            <g fill="none" stroke="#c6c9ca" strokeMiterlimit="10" strokeWidth="2" id="r3-r">
               <circle id="c3-r" cx="371.03" cy="71" r="10"/>
               <line id="l3-r" x1="361.03" y1="71" x2="331.03" y2="71"/>
             </g>
-            <g fill="none" stroke="#2ad2c9" stroke-miterlimit="10" stroke-width="2" id="r4-l">
+            <g fill="none" stroke="#2ad2c9" strokeMiterlimit="10" strokeWidth="2" id="r4-l">
               <circle id="c4-l" cx="151.03" cy="101" r="10"/>
               <line id="l4-l" x1="161.03" y1="101" x2="191.03" y2="101"/>
             </g>
-            <g fill="none" stroke="#01a982" stroke-miterlimit="10" stroke-width="2" id="r4-r">
+            <g fill="none" stroke="#01a982" strokeMiterlimit="10" strokeWidth="2" id="r4-r">
               <circle id="c4-r" cx="361.03" cy="101" r="10"/>
               <line id="l4-r" x1="351.03" y1="101" x2="321.03" y2="101"/>
             </g>
-            <g fill="none" stroke="#ff8d6d" stroke-miterlimit="10" stroke-width="2" id="r5-l">
+            <g fill="none" stroke="#ff8d6d" strokeMiterlimit="10" strokeWidth="2" id="r5-l">
               <circle id="c5-l" cx="141.03" cy="131" r="10"/>
               <line id="l5-l" x1="151.03" y1="131" x2="181.03" y2="131"/>
             </g>
-            <g fill="none" stroke="#2ad2c9" stroke-miterlimit="10" stroke-width="2" id="r5-r">
+            <g fill="none" stroke="#2ad2c9" strokeMiterlimit="10" strokeWidth="2" id="r5-r">
               <circle id="c5-r" cx="371.03" cy="131" r="10"/>
               <line id="l5-r" x1="361.03" y1="131" x2="331.03" y2="131"/>
             </g>
-            <g fill="none" stroke="#2ad2c9" stroke-miterlimit="10" stroke-width="2" id="r6-l">
+            <g fill="none" stroke="#2ad2c9" strokeMiterlimit="10" strokeWidth="2" id="r6-l">
               <circle id="c6-l" cx="131.03" cy="161" r="10"/>
               <line id="l6-l" x1="141.03" y1="161" x2="251.03" y2="161"/>
             </g>
-            <g fill="none" stroke="#ff8d6d" stroke-miterlimit="10" stroke-width="2" id="r6-r">
+            <g fill="none" stroke="#ff8d6d" strokeMiterlimit="10" strokeWidth="2" id="r6-r">
               <circle id="c6-r" cx="381.03" cy="161" r="10"/>
               <line id="l6-r" x1="371.03" y1="161" x2="251.03" y2="161"/>
             </g>
-            <g fill="none" stroke="#01a982" stroke-miterlimit="10" stroke-width="2" id="r7-l">
+            <g fill="none" stroke="#01a982" strokeMiterlimit="10" strokeWidth="2" id="r7-l">
               <circle id="c7-l" cx="11" cy="441.23" r="10"/>
               <polyline id="l7-l" points="251 191.23 131 191.23 11 191.23 11 431.23"/>
             </g>
-            <g fill="none" stroke="#2ad2c9" stroke-miterlimit="10" stroke-width="2" id="r7-r">
+            <g fill="none" stroke="#2ad2c9" strokeMiterlimit="10" strokeWidth="2" id="r7-r">
               <circle id="c7-r" cx="391" cy="191.23" r="10"/>
               <line id="l7-r" x1="381" y1="191.23" x2="251" y2="191.23"/>
             </g>
@@ -224,9 +224,9 @@ const GenomicBasics = (props) => {
         </div>
         <div className={style.hexagonsTwo}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.03 247.14">
-            <g id="Content" fill="none" stroke-miterlimit="10">
-              <polygon id="hexFive" points="166.23 55.86 56.95 55.86 2.31 150.5 56.95 245.14 166.23 245.14 220.87 150.5 166.23 55.86" stroke="#2ad2c9" stroke-width="4"/>
-              <polygon id="hexSix" points="279.33 40.5 256.23 40.5 244.69 60.5 256.23 80.5 279.33 80.5 290.87 60.5 279.33 40.5" stroke="#ff8d6d" stroke-width="2"/>
+            <g id="Content" fill="none" strokeMiterlimit="10">
+              <polygon id="hexFive" points="166.23 55.86 56.95 55.86 2.31 150.5 56.95 245.14 166.23 245.14 220.87 150.5 166.23 55.86" stroke="#2ad2c9" strokeWidth="4"/>
+              <polygon id="hexSix" points="279.33 40.5 256.23 40.5 244.69 60.5 256.23 80.5 279.33 80.5 290.87 60.5 279.33 40.5" stroke="#ff8d6d" strokeWidth="2"/>
               <polygon id="hexSeven" points="176.83 0.5 168.73 0.5 164.69 7.51 168.73 14.52 176.83 14.52 180.87 7.51 176.83 0.5" stroke="#00b388"/>
             </g>
           </svg>
@@ -237,8 +237,8 @@ const GenomicBasics = (props) => {
         <figure className={style.markerFigure}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 220">
             <rect width="310" height="220" fill="#425563" id="Background"/>
-            <g id="Markers" fill="none" stroke-miterlimit="10">
-              <g stroke="#2ad2c9" stroke-width="2">
+            <g id="Markers" fill="none" strokeMiterlimit="10">
+              <g stroke="#2ad2c9" strokeWidth="2">
                 <polyline points="304.37 210.17 304.37 215.17 299.37 215.17"/>
                 <line x1="291.37" y1="215.17" x2="263.37" y2="215.17" stroke-dasharray="8 8"/>
                 <polyline points="259.37 215.17 254.37 215.17 254.37 210.17"/>
@@ -248,50 +248,50 @@ const GenomicBasics = (props) => {
                 <polyline points="299.37 5.17 304.37 5.17 304.37 10.17"/>
                 <line x1="304.37" y1="19.69" x2="304.37" y2="205.41" stroke-dasharray="9.52 9.52"/>
               </g>
-              <line x1="267.21" y1="22.19" x2="291.53" y2="22.19" stroke="#fff" stroke-width="4"/>
-              <line x1="267.21" y1="89.08" x2="291.53" y2="89.08" stroke="#fff" stroke-width="4"/>
-              <line x1="267.21" y1="115.83" x2="291.53" y2="115.83" stroke="#fff" stroke-width="4"/>
-              <line x1="264.78" y1="196.1" x2="293.96" y2="196.1" stroke="#fff" stroke-width="4"/>
+              <line x1="267.21" y1="22.19" x2="291.53" y2="22.19" stroke="#fff" strokeWidth="4"/>
+              <line x1="267.21" y1="89.08" x2="291.53" y2="89.08" stroke="#fff" strokeWidth="4"/>
+              <line x1="267.21" y1="115.83" x2="291.53" y2="115.83" stroke="#fff" strokeWidth="4"/>
+              <line x1="264.78" y1="196.1" x2="293.96" y2="196.1" stroke="#fff" strokeWidth="4"/>
             </g>
-            <g id="arrow" fill="none" stroke="#2ad2c9" stroke-miterlimit="10" stroke-width="2">
+            <g id="arrow" fill="none" stroke="#2ad2c9" strokeMiterlimit="10" strokeWidth="2">
               <line x1="190.77" y1="105.17" x2="230.77" y2="105.17"/>
               <polyline points="220.77 95.17 230.77 105.17 220.77 115.17"/>
             </g>
-            <g id="Connectors" fill="none" stroke="#c6c9ca" stroke-miterlimit="10" stroke-width="2">
+            <g id="Connectors" fill="none" stroke="#c6c9ca" strokeMiterlimit="10" strokeWidth="2">
               <line x1="111.77" y1="22.31" x2="65.44" y2="22.31"/>
               <line x1="111.77" y1="89.32" x2="65.44" y2="89.32"/>
               <line x1="111.77" y1="115.13" x2="65.44" y2="115.13"/>
               <line x1="111.77" y1="195.05" x2="65.44" y2="195.05"/>
             </g>
-            <g id="helixOne" fill="none" stroke-miterlimit="10">
-              <path d="M23.86 157.74c-8.61 12.19-15.73 25.53-15.73 42M8.13 5.17c0 50.94 45.71 53.85 45.71 97.29 0 13.76-7.51 25.49-16.45 37.36" stroke="#ff8d6d" stroke-width="7"/>
-              <line x1="16.06" y1="8.82" x2="45.24" y2="8.82" stroke="#2ad2c9" stroke-width="4"/>
-              <path d="M23.67 64.76c-8.53 9.9-15.54 20.69-15.54 37.7 0 34 45.71 55.52 45.71 97.29M53.84 5.17c0 19.63-6.79 32.13-15.13 42.56" stroke="#ff8d6d" stroke-width="7"/>
-              <line x1="18.49" y1="22.19" x2="42.81" y2="22.19" stroke="#2ad2c9" stroke-width="4"/>
-              <line x1="25.78" y1="35.57" x2="35.51" y2="35.57" stroke="#2ad2c9" stroke-width="4"/>
-              <line x1="25.78" y1="76.92" x2="35.51" y2="76.92" stroke="#2ad2c9" stroke-width="4"/>
-              <line x1="18.49" y1="89.08" x2="42.81" y2="89.08" stroke="#2ad2c9" stroke-width="4"/>
-              <line x1="16.06" y1="102.46" x2="45.24" y2="102.46" stroke="#2ad2c9" stroke-width="4"/>
-              <line x1="18.49" y1="115.83" x2="42.81" y2="115.83" stroke="#2ad2c9" stroke-width="4"/>
-              <line x1="25.78" y1="128" x2="35.51" y2="128" stroke="#2ad2c9" stroke-width="4"/>
-              <line x1="25.78" y1="169.34" x2="35.51" y2="169.34" stroke="#2ad2c9" stroke-width="4"/>
-              <line x1="18.49" y1="182.72" x2="42.81" y2="182.72" stroke="#2ad2c9" stroke-width="4"/>
-              <line x1="16.06" y1="196.1" x2="45.24" y2="196.1" stroke="#2ad2c9" stroke-width="4"/>
+            <g id="helixOne" fill="none" strokeMiterlimit="10">
+              <path d="M23.86 157.74c-8.61 12.19-15.73 25.53-15.73 42M8.13 5.17c0 50.94 45.71 53.85 45.71 97.29 0 13.76-7.51 25.49-16.45 37.36" stroke="#ff8d6d" strokeWidth="7"/>
+              <line x1="16.06" y1="8.82" x2="45.24" y2="8.82" stroke="#2ad2c9" strokeWidth="4"/>
+              <path d="M23.67 64.76c-8.53 9.9-15.54 20.69-15.54 37.7 0 34 45.71 55.52 45.71 97.29M53.84 5.17c0 19.63-6.79 32.13-15.13 42.56" stroke="#ff8d6d" strokeWidth="7"/>
+              <line x1="18.49" y1="22.19" x2="42.81" y2="22.19" stroke="#2ad2c9" strokeWidth="4"/>
+              <line x1="25.78" y1="35.57" x2="35.51" y2="35.57" stroke="#2ad2c9" strokeWidth="4"/>
+              <line x1="25.78" y1="76.92" x2="35.51" y2="76.92" stroke="#2ad2c9" strokeWidth="4"/>
+              <line x1="18.49" y1="89.08" x2="42.81" y2="89.08" stroke="#2ad2c9" strokeWidth="4"/>
+              <line x1="16.06" y1="102.46" x2="45.24" y2="102.46" stroke="#2ad2c9" strokeWidth="4"/>
+              <line x1="18.49" y1="115.83" x2="42.81" y2="115.83" stroke="#2ad2c9" strokeWidth="4"/>
+              <line x1="25.78" y1="128" x2="35.51" y2="128" stroke="#2ad2c9" strokeWidth="4"/>
+              <line x1="25.78" y1="169.34" x2="35.51" y2="169.34" stroke="#2ad2c9" strokeWidth="4"/>
+              <line x1="18.49" y1="182.72" x2="42.81" y2="182.72" stroke="#2ad2c9" strokeWidth="4"/>
+              <line x1="16.06" y1="196.1" x2="45.24" y2="196.1" stroke="#2ad2c9" strokeWidth="4"/>
             </g>
-            <g id="HelixTwo" fill="none" stroke-miterlimit="10">
-              <path d="M136.79 157.74c-8.61 12.19-15.73 25.53-15.73 42M121.06 5.17c0 50.94 45.71 53.85 45.71 97.29 0 13.76-7.51 25.49-16.45 37.36" stroke="#ff8d6d" stroke-width="7"/>
-              <line x1="128.98" y1="8.82" x2="158.17" y2="8.82" stroke="#2ad2c9" stroke-width="4"/>
-              <path d="M136.6 64.76c-8.53 9.9-15.54 20.69-15.54 37.7 0 34 45.71 55.52 45.71 97.29M166.77 5.17c0 19.63-6.79 32.13-15.13 42.56" stroke="#ff8d6d" stroke-width="7"/>
-              <line x1="131.42" y1="22.19" x2="155.74" y2="22.19" stroke="#fff" stroke-width="4"/>
-              <line x1="138.71" y1="35.57" x2="148.44" y2="35.57" stroke="#2ad2c9" stroke-width="4"/>
-              <line x1="138.71" y1="76.92" x2="148.44" y2="76.92" stroke="#2ad2c9" stroke-width="4"/>
-              <line x1="131.42" y1="89.08" x2="155.74" y2="89.08" stroke="#fff" stroke-width="4"/>
-              <line x1="128.98" y1="102.46" x2="158.17" y2="102.46" stroke="#2ad2c9" stroke-width="4"/>
-              <line x1="131.42" y1="115.83" x2="155.74" y2="115.83" stroke="#fff" stroke-width="4"/>
-              <line x1="138.71" y1="128" x2="148.44" y2="128" stroke="#2ad2c9" stroke-width="4"/>
-              <line x1="138.71" y1="169.34" x2="148.44" y2="169.34" stroke="#2ad2c9" stroke-width="4"/>
-              <line x1="131.42" y1="182.72" x2="155.74" y2="182.72" stroke="#2ad2c9" stroke-width="4"/>
-              <line x1="128.98" y1="196.1" x2="158.17" y2="196.1" stroke="#fff" stroke-width="4"/>
+            <g id="HelixTwo" fill="none" strokeMiterlimit="10">
+              <path d="M136.79 157.74c-8.61 12.19-15.73 25.53-15.73 42M121.06 5.17c0 50.94 45.71 53.85 45.71 97.29 0 13.76-7.51 25.49-16.45 37.36" stroke="#ff8d6d" strokeWidth="7"/>
+              <line x1="128.98" y1="8.82" x2="158.17" y2="8.82" stroke="#2ad2c9" strokeWidth="4"/>
+              <path d="M136.6 64.76c-8.53 9.9-15.54 20.69-15.54 37.7 0 34 45.71 55.52 45.71 97.29M166.77 5.17c0 19.63-6.79 32.13-15.13 42.56" stroke="#ff8d6d" strokeWidth="7"/>
+              <line x1="131.42" y1="22.19" x2="155.74" y2="22.19" stroke="#fff" strokeWidth="4"/>
+              <line x1="138.71" y1="35.57" x2="148.44" y2="35.57" stroke="#2ad2c9" strokeWidth="4"/>
+              <line x1="138.71" y1="76.92" x2="148.44" y2="76.92" stroke="#2ad2c9" strokeWidth="4"/>
+              <line x1="131.42" y1="89.08" x2="155.74" y2="89.08" stroke="#fff" strokeWidth="4"/>
+              <line x1="128.98" y1="102.46" x2="158.17" y2="102.46" stroke="#2ad2c9" strokeWidth="4"/>
+              <line x1="131.42" y1="115.83" x2="155.74" y2="115.83" stroke="#fff" strokeWidth="4"/>
+              <line x1="138.71" y1="128" x2="148.44" y2="128" stroke="#2ad2c9" strokeWidth="4"/>
+              <line x1="138.71" y1="169.34" x2="148.44" y2="169.34" stroke="#2ad2c9" strokeWidth="4"/>
+              <line x1="131.42" y1="182.72" x2="155.74" y2="182.72" stroke="#2ad2c9" strokeWidth="4"/>
+              <line x1="128.98" y1="196.1" x2="158.17" y2="196.1" stroke="#fff" strokeWidth="4"/>
             </g>
           </svg>
         </figure>

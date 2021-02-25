@@ -1,38 +1,11 @@
 import React, { useRef, useEffect } from "react";
 import style from "./ctabutton.module.css";
-import gsap from 'gsap';
-import { TimelineLite } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
 
 const CtaButton = () => {
-  const svgWrapper = useRef(null);
-
-  useEffect(() => {
-    const [svgElements] = svgWrapper.current.children;
-    const master = gsap.timeline();
-
-    function timelineArrow() {
-      const tl = new TimelineLite({
-        scrollTrigger: {
-          trigger: "#ctaButton",
-          start: "bottom 100%",
-          end: "top 100%",
-          markers: false,
-          scrub: 1,
-        }
-      });
-        tl.from("#ctaArrow", { x: -1000, duration: 0.5});
-      return tl
-    }
-    master.add(timelineArrow());
-
-  }, []);
-
   return (
     <div className={ style.btnContainer }>
       <div className={ style.btnWrapper }>
-        <div className={ style.btnArrow } ref={svgWrapper}>
+        <div className={ style.btnArrow }>
           <svg
           aria-labelledby="arrow"
           id="svg"

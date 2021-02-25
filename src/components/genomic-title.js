@@ -242,10 +242,14 @@ const GenomicTitle = () => {
       className={style.genomicTitle}>
         <title id="title" lang="en">Genomic Basics for CIOs</title>
         <rect width="1000" height="460" fill="#425563" id="Background"/>
-        <g id="forCios" className={style.forCios}>
-          <text transform="translate(798.21 406.01)" font-size="50" fill="#fff" font-family="MetricHPE-Regular, MetricHPE">
-            <tspan letter-spacing="-.01em">f</tspan><tspan x="14.1" y="0">or CI</tspan><tspan x="103.35" y="0" letter-spacing="0em">O</tspan><tspan x="134.95" y="0">s</tspan>
-          </text>
+        <g id="forCIOs" className={style.forCios}>
+          <path d="M813.16,377a4.26,4.26,0,0,0-2.35-.6c-2.2,0-3.65,1.39-3.65,4.05v3.4h5V387h-5v19h-3.7V387h-3.75v-3.2h3.75v-3.7c0-4.45,2.9-7.06,6.8-7.06a7.35,7.35,0,0,1,2.9.5Z" transform="translate(-0.5)" fill="#fff"/>
+          <path d="M824.76,406.46c-6.1,0-10.2-4.75-10.2-11.55s4.1-11.55,10.2-11.55,10.2,4.75,10.2,11.55S830.81,406.46,824.76,406.46Zm0-19.8c-4,0-6.4,3.4-6.4,8.25s2.4,8.25,6.4,8.25,6.4-3.4,6.4-8.25S828.76,386.66,824.76,386.66Z" transform="translate(-0.5)" fill="#fff"/>
+          <path d="M851.46,387.56a4.75,4.75,0,0,0-2.5-.6,5.38,5.38,0,0,0-5.15,4.15V406h-3.75v-22.2h3.75v2.9a6.2,6.2,0,0,1,5.5-3.35,5.42,5.42,0,0,1,2.15.35Z" transform="translate(-0.5)" fill="#fff"/>
+          <path d="M880.06,374.86a12.59,12.59,0,0,1,8.25,2.64v4.16a11.35,11.35,0,0,0-8.2-3.25c-6.2,0-10.5,4.85-10.5,12.25s4.3,12.25,10.5,12.25a11.56,11.56,0,0,0,8.2-3.25v4.15a12.54,12.54,0,0,1-8.25,2.65c-8.2,0-14.4-6.2-14.4-15.8S871.86,374.86,880.06,374.86Z" transform="translate(-0.5)" fill="#fff"/>
+          <path d="M898.41,406h-3.95v-30.7h3.95Z" transform="translate(-0.5)" fill="#fff"/>
+          <path d="M917.76,406.46c-8,0-13.85-6.55-13.85-15.8s5.8-15.8,13.85-15.8,13.9,6.5,13.9,15.8S925.86,406.46,917.76,406.46Zm0-28c-5.9,0-9.9,5-9.9,12.25s4,12.25,9.9,12.25,10-5.05,10-12.25S923.71,378.41,917.76,378.41Z" transform="translate(-0.5)" fill="#fff"/>
+          <path d="M935.71,400.26a10.73,10.73,0,0,0,7.3,3c2.45,0,4.6-.9,4.6-3.1,0-1.65-1.25-2.55-3.2-3.2l-3-1c-3.35-1.1-5.6-2.7-5.6-6.3,0-3.9,3.45-6.25,7.85-6.25a11.55,11.55,0,0,1,6.6,1.95v3.9a9.93,9.93,0,0,0-6.6-2.65c-2.3,0-4.2,1-4.2,2.9s1.2,2.4,3.3,3.15l3.4,1.15c3.35,1.15,5.2,3.1,5.2,6.25,0,4.1-3.65,6.45-8.3,6.45a12.3,12.3,0,0,1-7.3-2.2Z" transform="translate(-0.5)" fill="#fff"/>
         </g>
         <rect id="__Cio_background" x="596" y="360" width="178" height="60" fill={typeBg}/>
         <g id="__S2" className={style.__S2} data-name="__S2">
