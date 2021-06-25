@@ -40,8 +40,6 @@ const GenomicBasics = (props) => {
         tl.fromTo("#hexFive", { x: -120 }, { x: -20 }, "<");
         tl.fromTo("#hexSix", { x: -120 }, { x: 0 }, "<");
         tl.fromTo("#hexSeven", { x: -120 }, { x: 10 }, "<");
-        tl.fromTo("#stepLine", { drawSVG: "50% 50%" }, { drawSVG: "100%" }, "<");
-        tl.fromTo("#stepLineCircle", { drawSVG: "0%" }, { drawSVG: "100%" });
       return tl;
     }
 
@@ -132,14 +130,6 @@ const GenomicBasics = (props) => {
               <polygon id="hexTwo" points="50.78 3.68 40.78 3.68 35.78 12.34 40.78 21 50.78 21 55.78 12.34 50.78 3.68" stroke="#ff8d6d"/>
               <polygon id="hexThree" points="323.76 1 306.44 1 297.78 16 306.44 31 323.76 31 332.42 16 323.76 1" stroke="#e6e7e8" strokeWidth="2"/>
               <polygon id="hexFour" points="42.12 41 14.8 41 1.14 66 14.8 91 42.12 91 55.78 66 42.12 41" stroke="#e6e7e8" strokeWidth="2"/>
-            </g>
-          </svg>
-        </div>
-        <div className={style.circleStepLine}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 462 52">
-            <g id="circleStepLine" dats-name="circleStepLine" fill="none" stroke="#2ad2c9" strokeMiterlimit="10" strokeWidth="2">
-              <polyline id="stepLine" points="440 11 240 11 240 51 0 51"/>
-              <circle id="stepLineCircle" cx="451" cy="11" r="10"/>
             </g>
           </svg>
         </div>

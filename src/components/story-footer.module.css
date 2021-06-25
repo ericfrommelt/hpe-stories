@@ -63,7 +63,7 @@ footer a {
 
 .ctaCopy p {
   font-family: "MetricHPE-Web-SemiBold";
-  line-height: 1.2rem;
+  line-height: 1.3rem;
 }
 
 @media screen and (min-width: 760px) {
@@ -73,13 +73,13 @@ footer a {
 
   .ctaCopy p {
     font-size: 1.625rem;
-    line-height: 1.725rem;
+    line-height: 1.9rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .ctaCopy p {
     font-size: 1.75rem;
-    line-height: 1.75rem;
+    line-height: 2rem;
   }
 }
