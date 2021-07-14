@@ -70,7 +70,7 @@ const IndexPage = (props) => (
               </svg>
             </div>
             <div className={style.back__alphanumeric}>
-              <a className={style.link__a} href="https://www.ericfrommelt.com/">
+              <a className={style.link__a} href="https://www.alphanumeric.io/">
                 <p>Back</p>
               </a>
             </div>
