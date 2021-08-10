@@ -19,56 +19,53 @@ const CloudCliff = (props) => {
     const [svgElements] = svgWrapper.current.children
     const master = gsap.timeline()
     CustomEase.create("typeEase", ".9,.03,.04,.99")
-    const dur = 5;
+    const dur = 2;
 
     function bulletArrowsOne() {
       const tl = new TimelineLite({
         scrollTrigger: {
-          trigger: "#b1",
-          start: "20px 80%",
-          end: "center bottom",
+          trigger: "#performance-copy",
+          start: "bottom bottom",
+          end: "#b3",
           markers: false,
-          scrub: 1,
-          endTrigger: ".cloudCliffOneImage"
+          scrub: 1
         },
       });
-      tl.from("#b1", {x: -600, ease: "linear"});
-      tl.from("#b2", {x: -600, ease: "linear"});
-      tl.from("#b3", {x: -600, ease: "linear"});
+      tl.from("#b1", {y: +60, ease: "typeEase", opacity: "0"});
+      tl.from("#b2", {y: +60, ease: "typeEase", opacity: "0"});
+      tl.from("#b3", {y: +60, ease: "typeEase", opacity: "0"});
       return tl
     }
 
     function bulletArrowsTwo() {
       const tl = new TimelineLite({
         scrollTrigger: {
-          trigger: "#b4",
-          start: "20px 80%",
-          end: "center bottom",
+          trigger: "#cost-copy",
+          start: "bottom bottom",
+          end: "#b6",
           markers: false,
-          scrub: 1,
-          endTrigger: ".cloudCliffTwoImage"
+          scrub: 1
         },
       });
-      tl.from("#b4", {x: -1400, ease: "linear"});
-      tl.from("#b5", {x: -1400, ease: "linear"});
-      tl.from("#b6", {x: -1400, ease: "linear"});
+      tl.from("#b4", {y: +60, ease: "typeEase", opacity: "0"});
+      tl.from("#b5", {y: +60, ease: "typeEase", opacity: "0"});
+      tl.from("#b6", {y: +60, ease: "typeEase", opacity: "0"});
       return tl
     }
 
     function bulletArrowsThree() {
       const tl = new TimelineLite({
         scrollTrigger: {
-          trigger: "#b7",
-          start: "20px 80%",
-          end: "center bottom",
+          trigger: "#headlineThree",
+          start: "bottom bottom",
+          end: "#b9",
           markers: false,
-          scrub: 1,
-          endTrigger: ".cloudCliffImage"
+          scrub: 1
         },
       });
-      tl.from("#b7", {x: -800, ease: "linear"});
-      tl.from("#b8", {x: -800, ease: "linear"});
-      tl.from("#b9", {x: -800, ease: "linear"});
+      tl.from("#b7", {y: +60, ease: "typeEase", opacity: "0"});
+      tl.from("#b8", {y: +60, ease: "typeEase", opacity: "0"});
+      tl.from("#b9", {y: +60, ease: "typeEase", opacity: "0"});
       return tl
     }
 
@@ -104,7 +101,7 @@ const CloudCliff = (props) => {
           <div className={ style.cloudCliffOneContent }>
             <h2 className={style.listheader}>Cloud Cliff #1</h2>
             <h3>Performance</h3>
-            <p className={style.listcopy}>Even the most efficient and well-designed cloud environments can be limited by performance shortcomings such as:</p>
+            <p id="performance-copy" className={style.listcopy}>Even the most efficient and well-designed cloud environments can be limited by performance shortcomings such as:</p>
             <ul className={style.contentList}>
               <li id="b1">Latency</li>
               <li id="b2">Scalability</li>
@@ -123,7 +120,7 @@ const CloudCliff = (props) => {
           <div className={ style.cloudCliffTwoContent }>
             <h2 className={style.listheader}>Cloud Cliff #2</h2>
             <h3>Cost</h3>
-            <p className={style.listcopy}>Many executives expected rock-bottom pricing from unmanaged, commodity cloud offering and instead experienced issues such as:</p>
+            <p id="cost-copy" className={style.listcopy}>Many executives expected rock-bottom pricing from unmanaged, commodity cloud offering and instead experienced issues such as:</p>
             <ul className={style.contentList}>
               <li id="b4">Higher-than-expected costs</li>
               <li id="b5">Issues with economies of scale</li>
@@ -140,9 +137,9 @@ const CloudCliff = (props) => {
             >
           </Img>
           <div className={ style.cloudCliffThreeContent }>
-            <h2>Cloud Cliff #3</h2>
+            <h2 id="headlineThree">Cloud Cliff #3</h2>
             <h3>Security &amp; Control Risks</h3>
-            <p className={style.listcopy}>A loss of control is often one of the main drawbacks for public cloud deployments, raising issues such as:</p>
+            <p id="security-copy" className={style.listcopy}>A loss of control is often one of the main drawbacks for public cloud deployments, raising issues such as:</p>
             <ul className={style.contentList}>
               <li id="b7">Lack of flexibility and customization</li>
               <li id="b8">Limited security and compliance</li>
