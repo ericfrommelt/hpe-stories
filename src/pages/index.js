@@ -50,7 +50,7 @@ const IndexPage = (props) => (
     <div className={style.flex__wrap}>
       <section className={style.intro}>
         <h1 className={style.intro__title}>Editorial experiences for HPE</h1>
-        <p classname={style.intro__copy}>Design and development by <a className={style.home__link} href="http://www.alphanumeric.io">Eric Frommelt</a></p>
+        <p classname={style.intro__copy}>Design and development by <a className={style.home__link} href="http://www.ericfrommelt.design">Eric Frommelt</a></p>
         <p className={style.tech}>Gatsby, CSS Modules, GSAP, visx</p>
         <div className={style.colorBar}></div>
       </section> 
@@ -70,7 +70,7 @@ const IndexPage = (props) => (
               </svg>
             </div>
             <div className={style.back__alphanumeric}>
-              <a className={style.link__a} href="https://www.alphanumeric.io/">
+              <a className={style.link__a} href="https://www.ericfrommelt.design/">
                 <p>Back</p>
               </a>
             </div>
